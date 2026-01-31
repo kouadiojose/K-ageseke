@@ -45,8 +45,8 @@ services:
     type: SECRET
 
 databases:
-- name: k-ageseke-db
+- name: kagesekedb
   engine: PG
-  version: "14"
+  version: "17"
   size: basic-xs
   num_nodes: 1
