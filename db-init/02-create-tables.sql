@@ -1,4 +1,4 @@
--- Script d'initialisation des tables pour GISABO
+-- Script d'initialisation des tables pour K-AGESEKE
 -- Ce script est exécuté automatiquement lors de la première création de la base de données
 
 -- Extensions PostgreSQL nécessaires

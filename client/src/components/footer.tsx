@@ -14,7 +14,7 @@ export default function Footer() {
                 <i className="fas fa-globe-africa text-white text-lg"></i>
               </div>
               <div>
-                <h3 className="text-xl font-bold font-poppins">GISABO Group</h3>
+                <h3 className="text-xl font-bold font-poppins">K-Ageseke Group</h3>
                 <p className="text-sm text-gray-400">{t("hero.subtitle")}</p>
               </div>
             </div>
@@ -58,10 +58,10 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link
-                  href="/gisabo"
+                  href="/k-ageseke"
                   className="hover:text-white transition-colors"
                 >
-                  Gisabo
+                  K-Ageseke
                 </Link>
               </li>
               <li>
@@ -117,7 +117,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 GISABO Group by{" "}
+            © 2024 K-Ageseke Group by{" "}
             <a href="https://markel-tech.com">Markel Technology</a>. Tous droits
             réservés.
           </p>

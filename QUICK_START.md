@@ -13,7 +13,7 @@ git push origin main
 
 2. **Créer l'App sur Digital Ocean**
 - Connectez-vous à Digital Ocean
-- Apps → Create App → GitHub → Sélectionnez gisabo-platform
+- Apps → Create App → GitHub → Sélectionnez k-ageseke-platform
 - Utilisez la configuration automatique dans `.do/app.yaml`
 
 3. **Variables d'environnement** (Settings → Environment Variables)
@@ -40,14 +40,14 @@ SESSION_SECRET=your_64_char_secret
 2. **Configuration en 1 commande**
 ```bash
 # Connexion SSH puis exécution
-curl -sSL https://raw.githubusercontent.com/votre-username/gisabo-platform/main/deploy.sh | bash
+curl -sSL https://raw.githubusercontent.com/votre-username/k-ageseke-platform/main/deploy.sh | bash
 ```
 
 3. **Configuration manuelle**
 ```bash
 # Cloner et configurer
-git clone https://github.com/votre-username/gisabo-platform.git
-cd gisabo-platform
+git clone https://github.com/votre-username/k-ageseke-platform.git
+cd k-ageseke-platform
 cp .env.example .env
 nano .env  # Éditer les variables
 

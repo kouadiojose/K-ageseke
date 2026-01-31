@@ -1,4 +1,4 @@
-name: gisabo-v2
+name: k-ageseke-v2
 region: fra
 
 services:
@@ -45,7 +45,7 @@ services:
     type: SECRET
 
 databases:
-- name: gisabo-db
+- name: k-ageseke-db
   engine: PG
   version: "14"
   size: basic-xs

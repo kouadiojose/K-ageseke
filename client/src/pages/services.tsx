@@ -199,7 +199,7 @@ export default function Services() {
               {t('servicesSection.callUs')}
             </a>
             <a
-              href="mailto:contact@gisabogroup.ca"
+              href="mailto:contact@k-ageseke.com"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition-colors flex items-center justify-center gap-2"
             >
               <i className="fas fa-envelope"></i>

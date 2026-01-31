@@ -5,7 +5,7 @@ const API_BASE_URL = 'https://f3463d8a-3952-431c-97a1-a4d3cfd05c57-00-3sgbjbr0bb
 
 // Test de connexion à l'API
 async function testApiConnection() {
-  console.log('🧪 Test de connexion API mobile -> backend GISABO\n');
+  console.log('🧪 Test de connexion API mobile -> backend K-AGESEKE\n');
   
   const endpoints = [
     '/api/services',

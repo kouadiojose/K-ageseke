@@ -1,15 +1,15 @@
 # 🖼️ Configuration des Images pour Digital Ocean App Platform
 
-## 📁 Structure des Images dans GISABO
+## 📁 Structure des Images dans K-AGESEKE
 
 ### Images Système (Statiques)
 ```
 client/public/
-├── gisabo-logo.png          # Logo principal GISABO
+├── k-ageseke-logo.png          # Logo principal K-AGESEKE
 └── mobile.html              # Page mobile
 
 attached_assets/
-├── logo_gisabo.png          # Logo alternatif
+├── logo_k-ageseke.png          # Logo alternatif
 └── image_*.png              # Images diverses de l'application
 ```
 
@@ -41,8 +41,8 @@ app.use('/assets', express.static('attached_assets'));
 
 ### Images Statiques (Frontend)
 ```
-https://votre-app.ondigitalocean.app/gisabo-logo.png
-https://votre-app.ondigitalocean.app/assets/logo_gisabo.png
+https://votre-app.ondigitalocean.app/k-ageseke-logo.png
+https://votre-app.ondigitalocean.app/assets/logo_k-ageseke.png
 ```
 
 ### Images Produits/Services (API)
@@ -100,10 +100,10 @@ GET /assets/* → serve from attached_assets/
 ### Tests des Images Statiques
 ```bash
 # Logo principal
-curl -I https://votre-app.ondigitalocean.app/gisabo-logo.png
+curl -I https://votre-app.ondigitalocean.app/k-ageseke-logo.png
 
 # Logo alternatif
-curl -I https://votre-app.ondigitalocean.app/assets/logo_gisabo.png
+curl -I https://votre-app.ondigitalocean.app/assets/logo_k-ageseke.png
 ```
 
 ### Tests des Images Dynamiques
@@ -134,7 +134,7 @@ GET https://votre-app.ondigitalocean.app/uploads/products/product-*.jpg
 - service-1748548460090-233604820.jpg
 
 ### Assets Système (53+ images)
-- Logo GISABO : logo_gisabo.png
+- Logo K-AGESEKE : logo_k-ageseke.png
 - Images diverses : image_*.png
 - Captures d'écran : image_*.png
 
@@ -146,9 +146,9 @@ GET https://votre-app.ondigitalocean.app/uploads/products/product-*.jpg
 <img 
   src={imageSrc} 
   onError={(e) => {
-    e.target.src = '/gisabo-logo.png'; // Image par défaut
+    e.target.src = '/k-ageseke-logo.png'; // Image par défaut
   }}
-  alt="Image GISABO"
+  alt="Image K-AGESEKE"
 />
 ```
 
@@ -175,7 +175,7 @@ Digital Ocean App Platform utilise un **stockage éphémère**. Les images uploa
 #### Solution 2: Digital Ocean Spaces (Futur)
 ```bash
 # À ajouter plus tard si besoin
-SPACES_BUCKET=gisabo-images
+SPACES_BUCKET=k-ageseke-images
 SPACES_REGION=nyc3
 SPACES_ACCESS_KEY=votre-clé
 SPACES_SECRET_KEY=votre-secret
@@ -196,7 +196,7 @@ SPACES_SECRET_KEY=votre-secret
 - ✅ Toutes les images existantes préservées
 
 ### Tests Post-Déploiement
-- [ ] Logo GISABO visible sur la page d'accueil
+- [ ] Logo K-AGESEKE visible sur la page d'accueil
 - [ ] Images produits visibles dans le marketplace  
 - [ ] Images services visibles dans la liste des services
 - [ ] Upload de nouvelles images fonctionnel (admin)

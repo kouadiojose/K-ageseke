@@ -1,4 +1,4 @@
-# Guide de démarrage - GISABO Mobile
+# Guide de démarrage - K-AGESEKE Mobile
 
 ## État des tests ✅
 
@@ -53,7 +53,7 @@ npx expo start
 
 ### Interface utilisateur
 - Navigation par onglets
-- Design GISABO (orange)
+- Design K-AGESEKE (orange)
 - Responsive mobile
 
 ## Données utilisées

@@ -2,7 +2,7 @@
 
 ## 📋 Variables d'Environnement Requises
 
-Pour que votre application GISABO fonctionne correctement sur Digital Ocean App Platform, vous devez configurer les variables CinetPay suivantes :
+Pour que votre application K-AGESEKE fonctionne correctement sur Digital Ocean App Platform, vous devez configurer les variables CinetPay suivantes :
 
 ### Variables Obligatoires
 

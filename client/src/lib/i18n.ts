@@ -108,7 +108,7 @@ export const translations = {
       supportDescription: "Vous pouvez choisir de payer plus pour soutenir nos producteurs",
       cancel: "Annuler",
     },
-    gisabo: {
+    kAgeseke: {
       loginRequired: "Connexion requise",
       loginRequiredDesc: "Vous devez être connecté pour effectuer un transfert",
       loginRequiredPayment: "Vous devez être connecté pour effectuer un paiement",
@@ -201,16 +201,16 @@ export const translations = {
       }
     },
     chatbot: {
-      title: "Assistant Gisabo",
+      title: "Assistant K-Ageseke",
       placeholder: "Tapez votre message...",
-      typing: "Assistant Gisabo tape...",
+      typing: "Assistant K-Ageseke tape...",
       suggestions: "Suggestions :",
       clear: "Effacer",
       send: "Envoyer"
     },
     footer: {
       aboutUs: "À propos de nous",
-      aboutText: "GISABO Group connecte la diaspora africaine à travers des solutions financières innovantes et un marketplace authentique.",
+      aboutText: "K-Ageseke Group connecte la diaspora africaine à travers des solutions financières innovantes et un marketplace authentique.",
       quickLinks: "Liens rapides",
       services: "Services",
       contact: "Contact",
@@ -230,7 +230,7 @@ export const translations = {
       stepsSubtitle: "Un processus simple et transparent pour tous vos transferts",
       steps: {
         step1Title: "Inscription",
-        step1Desc: "Créez votre compte GISABO en quelques minutes avec vos informations personnelles",
+        step1Desc: "Créez votre compte K-Ageseke en quelques minutes avec vos informations personnelles",
         step2Title: "Sélection du service",
         step2Desc: "Choisissez le service qui correspond à vos besoins : transfert d'argent ou marketplace",
         step3Title: "Saisie des détails",
@@ -242,7 +242,7 @@ export const translations = {
         step6Title: "Confirmation",
         step6Desc: "Recevez la confirmation instantanée et suivez votre transaction en temps réel"
       },
-      whyChooseTitle: "Pourquoi choisir GISABO",
+      whyChooseTitle: "Pourquoi choisir K-Ageseke",
       whyChooseSubtitle: "Les avantages qui font de nous votre partenaire de confiance",
       features: {
         speedTitle: "Rapidité",
@@ -257,7 +257,7 @@ export const translations = {
       faqTitle: "Questions fréquentes",
       faqSubtitle: "Trouvez rapidement les réponses à vos questions",
       ctaTitle: "Prêt à commencer ?",
-      ctaSubtitle: "Rejoignez des milliers d'utilisateurs qui font confiance à GISABO",
+      ctaSubtitle: "Rejoignez des milliers d'utilisateurs qui font confiance à K-Ageseke",
       createAccount: "Créer un compte",
       contactUs: "Nous contacter"
     },
@@ -353,7 +353,7 @@ export const translations = {
       supportDescription: "You can choose to pay more to support our producers",
       cancel: "Cancel",
     },
-    gisabo: {
+    kAgeseke: {
       loginRequired: "Login Required",
       loginRequiredDesc: "You must be logged in to make a transfer",
       loginRequiredPayment: "You must be logged in to make a payment",
@@ -446,16 +446,16 @@ export const translations = {
       }
     },
     chatbot: {
-      title: "Assistant Gisabo",
+      title: "Assistant K-Ageseke",
       placeholder: "Type your message...",
-      typing: "Assistant Gisabo is typing...",
+      typing: "Assistant K-Ageseke is typing...",
       suggestions: "Suggestions:",
       clear: "Clear",
       send: "Send"
     },
     footer: {
       aboutUs: "About Us",
-      aboutText: "GISABO Group connects the African diaspora through innovative financial solutions and an authentic marketplace.",
+      aboutText: "K-Ageseke Group connects the African diaspora through innovative financial solutions and an authentic marketplace.",
       quickLinks: "Quick Links",
       services: "Services",
       contact: "Contact",
@@ -475,7 +475,7 @@ export const translations = {
       stepsSubtitle: "A simple and transparent process for all your transfers",
       steps: {
         step1Title: "Registration",
-        step1Desc: "Create your GISABO account in minutes with your personal information",
+        step1Desc: "Create your K-Ageseke account in minutes with your personal information",
         step2Title: "Service Selection",
         step2Desc: "Choose the service that fits your needs: money transfer or marketplace",
         step3Title: "Enter Details",
@@ -487,7 +487,7 @@ export const translations = {
         step6Title: "Confirmation",
         step6Desc: "Receive instant confirmation and track your transaction in real-time"
       },
-      whyChooseTitle: "Why Choose GISABO",
+      whyChooseTitle: "Why Choose K-Ageseke",
       whyChooseSubtitle: "The advantages that make us your trusted partner",
       features: {
         speedTitle: "Speed",
@@ -502,7 +502,7 @@ export const translations = {
       faqTitle: "Frequently Asked Questions",
       faqSubtitle: "Find quick answers to your questions",
       ctaTitle: "Ready to get started?",
-      ctaSubtitle: "Join thousands of users who trust GISABO",
+      ctaSubtitle: "Join thousands of users who trust K-Ageseke",
       createAccount: "Create Account",
       contactUs: "Contact Us"
     },

@@ -13,7 +13,7 @@ import Checkout from "@/pages/checkout";
 import OrderSuccess from "@/pages/order-success";
 import Transfer from "@/pages/transfer";
 import Services from "@/pages/services";
-import Gisabo from "@/pages/gisabo";
+import KAgeseke from "@/pages/k-ageseke";
 import Fonctionnement from "@/pages/fonctionnement";
 import Contact from "@/pages/contact";
 import Profile from "@/pages/profile";
@@ -38,7 +38,7 @@ function Router() {
       <Route path="/order-success" component={OrderSuccess} />
       <Route path="/transfer" component={Transfer} />
       <Route path="/services" component={Services} />
-      <Route path="/gisabo" component={Gisabo} />
+      <Route path="/k-ageseke" component={KAgeseke} />
       <Route path="/fonctionnement" component={Fonctionnement} />
       <Route path="/contact" component={Contact} />
       <Route path="/profile" component={Profile} />

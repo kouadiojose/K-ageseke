@@ -29,8 +29,8 @@ export default function Chatbot({ className }: ChatbotProps) {
 
   // Messages de bienvenue selon la langue
   const welcomeMessage = {
-    fr: "Bonjour ! Je suis Assistant Gisabo, votre assistant virtuel. Comment puis-je vous aider aujourd'hui avec vos transferts d'argent ou le marketplace ?",
-    en: "Hello! I'm Assistant Gisabo, your virtual assistant. How can I help you today with your money transfers or marketplace?"
+    fr: "Bonjour ! Je suis Assistant K-Ageseke, votre assistant virtuel. Comment puis-je vous aider aujourd'hui avec vos transferts d'argent ou le marketplace ?",
+    en: "Hello! I'm Assistant K-Ageseke, your virtual assistant. How can I help you today with your money transfers or marketplace?"
   };
 
   // Initialiser avec le message de bienvenue

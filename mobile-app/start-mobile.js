@@ -11,13 +11,13 @@ app.use(express.static('.'));
 // Endpoint principal Expo
 app.get('/', (req, res) => {
   res.json({
-    name: 'GISABO Mobile',
-    slug: 'gisabo-mobile',
+    name: 'K-AGESEKE Mobile',
+    slug: 'k-ageseke-mobile',
     version: '1.0.0',
     platforms: ['ios', 'android'],
     exp: {
-      name: 'GISABO Mobile',
-      slug: 'gisabo-mobile',
+      name: 'K-AGESEKE Mobile',
+      slug: 'k-ageseke-mobile',
       platforms: ['ios', 'android'],
       version: '1.0.0'
     }
@@ -25,11 +25,11 @@ app.get('/', (req, res) => {
 });
 
 // Endpoint pour les métadonnées
-app.get('/--/api/v2/project/@anonymous/gisabo-mobile', (req, res) => {
+app.get('/--/api/v2/project/@anonymous/k-ageseke-mobile', (req, res) => {
   res.json({
-    name: 'GISABO Mobile',
-    fullName: '@anonymous/gisabo-mobile',
-    slug: 'gisabo-mobile',
+    name: 'K-AGESEKE Mobile',
+    fullName: '@anonymous/k-ageseke-mobile',
+    slug: 'k-ageseke-mobile',
     privacy: 'public',
     platforms: ['ios', 'android']
   });
@@ -46,7 +46,7 @@ app.listen(PORT, '0.0.0.0', () => {
   
   console.log(`
 ╔══════════════════════════════════════════════════════════════╗
-║                  🚀 GISABO MOBILE SERVER                     ║
+║                  🚀 K-AGESEKE MOBILE SERVER                     ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
 ║  📱 Sur votre iPhone avec Expo Go:                          ║
@@ -57,7 +57,7 @@ app.listen(PORT, '0.0.0.0', () => {
 ║                                                              ║
 ║      ${url}                                      ║
 ║                                                              ║
-║  ✅ Votre app GISABO se lancera automatiquement             ║
+║  ✅ Votre app K-AGESEKE se lancera automatiquement             ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 
@@ -68,6 +68,6 @@ app.listen(PORT, '0.0.0.0', () => {
 
 // Gérer l'arrêt propre
 process.on('SIGINT', () => {
-  console.log('\n👋 Arrêt du serveur mobile GISABO');
+  console.log('\n👋 Arrêt du serveur mobile K-AGESEKE');
   process.exit(0);
 });

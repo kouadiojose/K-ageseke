@@ -59,7 +59,7 @@ console.log('\n⚙️ Configuration App Platform :');
 try {
   const appYaml = fs.readFileSync('.do/app.yaml', 'utf8');
   
-  if (appYaml.includes('gisabo-platform')) {
+  if (appYaml.includes('k-ageseke-platform')) {
     console.log('  ✅ Nom d\'application configuré');
   } else {
     console.log('  ⚠️ Nom d\'application à vérifier');

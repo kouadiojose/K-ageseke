@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
     port: 25,
     secure: false, // true pour 465, false pour 587 ou 25
     auth: {
-        user: "noreply@gisabogroup.ca",
+        user: "noreply@k-ageseke.com",
         pass: "Wtz4rtEYe89D!",
     },
     tls: {
@@ -17,8 +17,8 @@ const transporter = nodemailer.createTransport({
 });
 
 // Email de l'administrateur (à configurer selon vos besoins)
-const ADMIN_EMAIL = "admin@gisabogroup.ca"; // Vous pouvez changer cet email
-const FROM_EMAIL = "noreply@gisabogroup.ca"; // Email expéditeur vérifié dans SendGrid
+const ADMIN_EMAIL = "admin@k-ageseke.com"; // Vous pouvez changer cet email
+const FROM_EMAIL = "noreply@k-ageseke.com"; // Email expéditeur vérifié dans SendGrid
 
 export async function sendTransferConfirmationEmail(
     transfer: Transfer,
@@ -55,7 +55,7 @@ export async function sendTransferConfirmationEmail(
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Confirmation de Transfert - Gisabo</title>
+    <title>Confirmation de Transfert - K-Ageseke</title>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
@@ -72,16 +72,16 @@ export async function sendTransferConfirmationEmail(
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌍 Gisabo Transfert d'argent</h1>
+            <h1>🌍 K-Ageseke Transfert d'argent</h1>
             <p>Confirmation de Transaction</p>
         </div>
         
         <div class="content">
             <p><strong>Cher(e) ${user.firstName} ${user.lastName},</strong></p>
-            <p>Merci d'avoir utilisé Gisabo Transfert d'argent.</p>
+            <p>Merci d'avoir utilisé K-Ageseke Transfert d'argent.</p>
             <p>Vous trouverez ci-dessous les détails de votre transaction.</p>
             <p><strong>Cordialement,</strong></p>
-            <p><em>L'équipe Gisabo</em></p>
+            <p><em>L'équipe K-Ageseke</em></p>
 
             <div class="section">
                 <h3>📋 Informations Expéditeur</h3>
@@ -201,8 +201,8 @@ export async function sendTransferConfirmationEmail(
         </div>
         
         <div class="footer">
-            <p>🌍 <strong>Gisabo Group</strong> - Votre partenaire de confiance pour les transferts d'argent</p>
-            <p>📧 Contact: info@gisabogroup.ca | 🌐 www.gisabogroup.ca</p>
+            <p>🌍 <strong>K-Ageseke Group</strong> - Votre partenaire de confiance pour les transferts d'argent</p>
+            <p>📧 Contact: info@k-ageseke.com | 🌐 www.k-ageseke.com</p>
         </div>
     </div>
 </body>
@@ -223,11 +223,11 @@ export async function sendTransferConfirmationEmail(
         const emailText = `
 Cher(e) ${user.firstName} ${user.lastName},
 
-Merci d'avoir utilisé Gisabo Transfert d'argent.
+Merci d'avoir utilisé K-Ageseke Transfert d'argent.
 Vous trouverez ci-dessous les détails de votre transaction.
 
 Cordialement,
-L'équipe Gisabo
+L'équipe K-Ageseke
 
 INFORMATIONS EXPÉDITEUR
 Nom et Prénom(s): ${user.firstName} ${user.lastName}
@@ -246,24 +246,24 @@ Mode livraison: ${transfer.deliveryMethod}
 ${transfer.bankName ? `Nom de la banque: ${transfer.bankName}` : ""}
 ${transfer.accountNumber ? `Numéro de compte: ${transfer.accountNumber}` : ""}
 ID Paiement Square: ${paymentId}
-Relevé sur carte bancaire: SQ*Gisabo Transfer
+Relevé sur carte bancaire: SQ*K-Ageseke Transfer
 
-Gisabo Group - Votre partenaire de confiance pour les transferts d'argent
-Contact: info@gisabogroup.ca | www.gisabogroup.ca
+K-Ageseke Group - Votre partenaire de confiance pour les transferts d'argent
+Contact: info@k-ageseke.com | www.k-ageseke.com
     `;
 
         // Envoi de l'email au client
         await transporter.sendMail({
-            from: `TRANSFERT GISABO <${FROM_EMAIL}>`,
+            from: `TRANSFERT K-AGESEKE <${FROM_EMAIL}>`,
             to: user.email,
-            subject: `Confirmation de transfert Gisabo - ${refNumber}`,
+            subject: `Confirmation de transfert K-Ageseke - ${refNumber}`,
             text: emailText,
             html: emailHTML,
         });
 
         // Envoi d'une copie à l'administrateur
         await transporter.sendMail({
-            from: `TRANSFERT GISABO <${FROM_EMAIL}>`,
+            from: `TRANSFERT K-AGESEKE <${FROM_EMAIL}>`,
             to: [ADMIN_EMAIL, "yeoyedjande@gmail.com"],
             subject: `Nouveau transfert - ${refNumber} - ${user.firstName} ${user.lastName}`,
             text: `NOUVEAU TRANSFERT EFFECTUÉ\n\n${emailText}`,
@@ -327,7 +327,7 @@ export async function sendOrderConfirmationEmail(
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Confirmation d'achat - Gisabo</title>
+    <title>Confirmation d'achat - K-Ageseke</title>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
@@ -345,13 +345,13 @@ export async function sendOrderConfirmationEmail(
 <body>
     <div class="container">
         <div class="header">
-            <h1>🛒 Achat Gisabo </h1>
+            <h1>🛒 Achat K-Ageseke </h1>
             <p>Confirmation d'achat</p>
         </div>
         
         <div class="content">
             <p><strong>Cher(e) ${user.firstName} ${user.lastName},</strong></p>
-            <p>Merci pour votre achat sur Gisabo. Votre commande a été confirmée et sera traitée dans les plus brefs délais.</p>
+            <p>Merci pour votre achat sur K-Ageseke. Votre commande a été confirmée et sera traitée dans les plus brefs délais.</p>
             
             <div class="section">
                 <h3>📦 Détails de la commande</h3>
@@ -416,14 +416,14 @@ export async function sendOrderConfirmationEmail(
                 </div>
                 <div class="info-row">
                     <span class="label">Relevé bancaire:</span>
-                    <span>SQ*Gisabo Marketplace</span>
+                    <span>SQ*K-Ageseke Marketplace</span>
                 </div>
             </div>
         </div>
         
         <div class="footer">
-            <p><strong>Gisabo Group</strong> - Votre marketplace de confiance</p>
-            <p>📧 Contact: info@gisabogroup.ca | 🌐 www.gisabogroup.ca</p>
+            <p><strong>K-Ageseke Group</strong> - Votre marketplace de confiance</p>
+            <p>📧 Contact: info@k-ageseke.com | 🌐 www.k-ageseke.com</p>
         </div>
     </div>
 </body>
@@ -433,7 +433,7 @@ export async function sendOrderConfirmationEmail(
         const emailText = `
 Cher(e) ${user.firstName} ${user.lastName},
 
-Merci pour votre achat sur Gisabo Marketplace. Votre commande a été confirmée et sera traitée dans les plus brefs délais.
+Merci pour votre achat sur K-Ageseke Marketplace. Votre commande a été confirmée et sera traitée dans les plus brefs délais.
 
 DÉTAILS DE LA COMMANDE
 Numéro de commande: ${orderNumber}
@@ -454,15 +454,15 @@ INFORMATIONS DE PAIEMENT
 ID Transaction: ${paymentId}
 Relevé bancaire: SQ*Coop Arcade
 
-Gisabo Group - Votre marketplace de confiance
-Contact: info@gisabogroup.ca | www.gisabogroup.ca
+K-Ageseke Group - Votre marketplace de confiance
+Contact: info@k-ageseke.com | www.k-ageseke.com
     `;
 
         // Envoi de l'email au client
         await transporter.sendMail({
-            from: `ACHAT GISABO <${FROM_EMAIL}>`,
+            from: `ACHAT K-AGESEKE <${FROM_EMAIL}>`,
             to: user.email,
-            subject: `Confirmation d'achat Gisabo - ${orderNumber}`,
+            subject: `Confirmation d'achat K-Ageseke - ${orderNumber}`,
             text: emailText,
             html: emailHTML,
         });

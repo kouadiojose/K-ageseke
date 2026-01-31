@@ -1,11 +1,11 @@
-# 🔐 Variables d'Environnement pour GISABO - Digital Ocean
+# 🔐 Variables d'Environnement pour K-AGESEKE - Digital Ocean
 
 ## 📋 Liste Complète des Variables Requises
 
 ### 🗄️ Base de Données
 ```bash
 # Fournie automatiquement par Digital Ocean Managed Database
-DATABASE_URL=${gisabo-db.DATABASE_URL}
+DATABASE_URL=${k-ageseke-db.DATABASE_URL}
 ```
 
 ### 💳 Square Payment (PRODUCTION)
@@ -27,7 +27,7 @@ CINETPAY_SITE_ID=105897933
 CINETPAY_CURRENCY=XOF
 ```
 
-### 🤖 OpenAI (Assistant Gisabo)
+### 🤖 OpenAI (Assistant K-Ageseke)
 ```bash
 OPENAI_API_KEY=sk-your-openai-api-key-here
 ```

@@ -509,7 +509,7 @@ export default function AdminSidebar() {
       {/* Mobile header */}
       <div className="lg:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50 px-4 py-3">
         <div className="flex items-center justify-between">
-          <h1 className="text-lg font-semibold text-gray-900">Gisabo Admin</h1>
+          <h1 className="text-lg font-semibold text-gray-900">K-Ageseke Admin</h1>
           <Button
             variant="ghost"
             size="sm"
@@ -537,7 +537,7 @@ export default function AdminSidebar() {
       `}>
         <div className="p-4 border-b border-gray-200 flex-shrink-0">
           <div className="flex items-center justify-between">
-            <h1 className="text-lg lg:text-xl font-bold text-gray-900">Gisabo Admin</h1>
+            <h1 className="text-lg lg:text-xl font-bold text-gray-900">K-Ageseke Admin</h1>
             <Button
               variant="ghost"
               size="sm"
@@ -848,7 +848,7 @@ export default function AdminSidebar() {
                   Services
                 </h2>
                 <p className="text-gray-600">
-                  Gérez les services offerts par Gisabo
+                  Gérez les services offerts par K-Ageseke
                 </p>
               </div>
 

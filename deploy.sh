@@ -5,7 +5,7 @@
 
 set -e
 
-echo "🚀 Démarrage du déploiement GISABO sur Digital Ocean..."
+echo "🚀 Démarrage du déploiement K-AGESEKE sur Digital Ocean..."
 
 # Couleurs pour l'affichage
 RED='\033[0;31m'
@@ -55,7 +55,7 @@ for var in "${required_vars[@]}"; do
 done
 
 log_info "Construction de l'image Docker..."
-docker build -t gisabo-app:latest .
+docker build -t k-ageseke-app:latest .
 
 log_info "Arrêt des conteneurs existants..."
 docker-compose down --remove-orphans

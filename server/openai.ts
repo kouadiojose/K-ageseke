@@ -8,11 +8,11 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY 
 });
 
-// Contexte de l'application GISABO pour l'assistant
-const GISABO_CONTEXT = `
-Tu es Assistant Gisabo, l'assistant virtuel de GISABO Group, une plateforme financière transfrontalière qui sert la diaspora africaine.
+// Contexte de l'application K-AGESEKE pour l'assistant
+const KAGESEKE_CONTEXT = `
+Tu es Assistant K-Ageseke, l'assistant virtuel de K-AGESEKE Group, une plateforme financière transfrontalière qui sert la diaspora africaine.
 
-GISABO Group offre :
+K-AGESEKE Group offre :
 1. TRANSFERTS D'ARGENT :
    - Transferts rapides et sécurisés vers l'Afrique
    - Taux de change compétitifs en temps réel
@@ -53,13 +53,13 @@ Tu dois répondre aux questions sur :
 Réponds toujours de manière professionnelle, empathique et utile. Si tu ne connais pas une information spécifique, recommande de contacter le support client.
 `;
 
-export async function chatWithGisaboAssistant(
+export async function chatWithKAgesekeAssistant(
   message: string,
   conversationHistory: Array<{ role: 'user' | 'assistant'; content: string }> = []
 ): Promise<string> {
   try {
     const messages = [
-      { role: 'system' as const, content: GISABO_CONTEXT },
+      { role: 'system' as const, content: KAGESEKE_CONTEXT },
       ...conversationHistory,
       { role: 'user' as const, content: message }
     ];

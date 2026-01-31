@@ -23,7 +23,7 @@ git commit -m "Configuration optimisée pour Digital Ocean App Platform
 ✅ Scripts robustes avec gestion timeouts
 ✅ Documentation complète déploiement/dépannage
 ✅ Secrets sécurisés générés
-✅ CinetPay préconfigurée + Assistant Gisabo AI
+✅ CinetPay préconfigurée + Assistant K-Ageseke AI
 
 Prêt pour Digital Ocean App Platform"
 ```
@@ -53,7 +53,7 @@ git push origin main
 ## ✅ Vérifications après Push
 
 Après avoir poussé vers GitHub, vérifiez :
-- [ ] Repository `yeoyedjande/gisabo-v2` mis à jour
+- [ ] Repository `yeoyedjande/k-ageseke-v2` mis à jour
 - [ ] Fichier `.do/app.yaml` présent dans la racine
 - [ ] Dossiers `uploads/` et `attached_assets/` présents
 - [ ] Tous les nouveaux fichiers de documentation
@@ -63,7 +63,7 @@ Après avoir poussé vers GitHub, vérifiez :
 Une fois le push terminé :
 1. Allez sur Digital Ocean App Platform
 2. Créez une nouvelle app depuis GitHub
-3. Sélectionnez `yeoyedjande/gisabo-v2`
+3. Sélectionnez `yeoyedjande/k-ageseke-v2`
 4. La configuration `.do/app.yaml` sera détectée automatiquement
 
 ---

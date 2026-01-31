@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Script de migration automatique pour Gisabo Database
+ * Script de migration automatique pour K-Ageseke Database
  * Usage: npm run migrate
  */
 
@@ -26,7 +26,7 @@ const client = new Client({
 
 const migrationSQL = `
 -- ===============================================
--- MIGRATION GISABO DATABASE - PRODUCTION
+-- MIGRATION K-AGESEKE DATABASE - PRODUCTION
 -- ===============================================
 
 SET statement_timeout = 0;
@@ -188,11 +188,11 @@ TRUNCATE TABLE exchange_rates, services, order_items, orders, transfers, product
 INSERT INTO users (id, username, email, password, first_name, last_name, phone, created_at, role) VALUES
 (1, 'yedjande', 'yeoyedjande@gmail.com', '$2b$10$Kfanqsjlr2SoR2yk3pOhPujS8SUKJjIPajRhHpkEV4MDb8iyIMJHe', 'YEO', 'YEDJANDE', '+2250747550417', '2025-05-28 15:07:10.548881', 'user'),
 (2, 'jose', 'kouadiojose@gmail.com', '$2b$10$5Vi86/EyLBJtu0Wzqm8km.8HKiwKBZYRnW/Ld/Bw/A0p00Uqp5M6O', 'José', 'Kouadio', NULL, '2025-06-02 03:05:38.193437', 'user'),
-(3, 'testuser', 'test@gisabo.com', '$2b$10$bgzyY8EdbLFSJh/EsmF1UuKaTXWP6TOCmwhOal9I3ka9StMqk2SyC', 'Test', 'User', NULL, '2025-06-10 15:43:47.18827', 'user');
+(3, 'testuser', 'test@k-ageseke.com', '$2b$10$bgzyY8EdbLFSJh/EsmF1UuKaTXWP6TOCmwhOal9I3ka9StMqk2SyC', 'Test', 'User', NULL, '2025-06-10 15:43:47.18827', 'user');
 
 -- Insertion des administrateurs
 INSERT INTO admins (id, username, email, password, first_name, last_name, role, is_active, created_at, last_login) VALUES
-(1, 'admin', 'admin@gisabo.com', '$2b$10$3787AoU6pc3DVrB.SUyaveDNe4GpQtWm4b1rjo6XrRgoaYzAlA/Cy', 'Admin', 'Gisabo', 'admin', true, '2025-05-29 11:46:40.230345', '2025-06-02 15:38:07.112');
+(1, 'admin', 'admin@k-ageseke.com', '$2b$10$3787AoU6pc3DVrB.SUyaveDNe4GpQtWm4b1rjo6XrRgoaYzAlA/Cy', 'Admin', 'K-Ageseke', 'admin', true, '2025-05-29 11:46:40.230345', '2025-06-02 15:38:07.112');
 
 -- Insertion des catégories
 INSERT INTO categories (id, name, slug, icon, color) VALUES
@@ -250,7 +250,7 @@ CREATE INDEX IF NOT EXISTS idx_admins_username ON admins(username);
 
 async function runMigration() {
   try {
-    console.log('🚀 Démarrage de la migration Gisabo...');
+    console.log('🚀 Démarrage de la migration K-Ageseke...');
     
     // Connexion à la base de données
     console.log('📡 Connexion à la base de données...');
@@ -296,14 +296,14 @@ async function runMigration() {
     console.log('🎉 MIGRATION RÉUSSIE!');
     console.log('');
     console.log('🔐 Comptes de test disponibles:');
-    console.log('   Admin: admin@gisabo.com');
+    console.log('   Admin: admin@k-ageseke.com');
     console.log('   User 1: yeoyedjande@gmail.com');
-    console.log('   User 2: test@gisabo.com');
+    console.log('   User 2: test@k-ageseke.com');
     console.log('');
     console.log('📦 Données disponibles:');
     console.log('   ✅ 6 catégories de produits');
     console.log('   ✅ 5 produits africains');
-    console.log('   ✅ 5 services Gisabo');
+    console.log('   ✅ 5 services K-Ageseke');
     console.log('   ✅ 1 taux de change CAD→XOF');
     console.log('');
     console.log('🚀 Votre marketplace est prête!');

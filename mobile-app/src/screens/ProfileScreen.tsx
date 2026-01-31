@@ -84,7 +84,7 @@ export default function ProfileScreen() {
 
       {/* App Version */}
       <View style={styles.versionContainer}>
-        <Text style={styles.versionText}>GISABO Mobile v1.0.0</Text>
+        <Text style={styles.versionText}>K-AGESEKE Mobile v1.0.0</Text>
       </View>
     </ScrollView>
   );

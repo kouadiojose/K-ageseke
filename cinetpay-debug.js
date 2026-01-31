@@ -54,7 +54,7 @@ if (hasApiKey && hasSiteId && hasEnvironment) {
   
   console.log("\n🔧 SOLUTION :");
   console.log("1. Aller dans Digital Ocean App Platform");
-  console.log("2. Sélectionner votre application GISABO");
+  console.log("2. Sélectionner votre application K-AGESEKE");
   console.log("3. Aller dans Settings > Environment Variables");
   console.log("4. Ajouter les variables manquantes :");
   console.log("   CINETPAY_API_KEY=69528412765f9bbf5cb3ac6.86470919");
