@@ -58,7 +58,7 @@ export default function ServicesSection() {
     );
   }
 
-  if (!services || services.length === 0) {
+  if (!services || !Array.isArray(services) || services.length === 0) {
     return (
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
@@ -93,6 +93,7 @@ export default function ServicesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services &&
+            Array.isArray(services) &&
             services
               .filter((service) => service.isActive)
               .map((service) => (
