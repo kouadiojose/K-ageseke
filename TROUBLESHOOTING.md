@@ -1,4 +1,4 @@
-# 🔧 Guide de Dépannage GISABO - Digital Ocean
+# 🔧 Guide de Dépannage K-AGESEKE - Digital Ocean
 
 ## 🚨 Problèmes Courants et Solutions
 
@@ -80,7 +80,7 @@
 ### 5. "OpenAI API Errors"
 
 **Symptômes :**
-- Assistant Gisabo ne répond pas
+- Assistant K-Ageseke ne répond pas
 - Erreurs 401 ou 429 dans les logs
 
 **Solutions :**

@@ -377,7 +377,7 @@ export default function AdminSidebar() {
       {/* Sidebar */}
       <div className="w-64 bg-white shadow-lg">
         <div className="p-6">
-          <h1 className="text-2xl font-bold text-gray-900">Gisabo Admin</h1>
+          <h1 className="text-2xl font-bold text-gray-900">K-Ageseke Admin</h1>
         </div>
         
         <nav className="px-4 space-y-2">
@@ -438,7 +438,7 @@ export default function AdminSidebar() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Services</h2>
-                <p className="text-gray-600">Gérez les services offerts par Gisabo</p>
+                <p className="text-gray-600">Gérez les services offerts par K-Ageseke</p>
               </div>
 
               {/* Add New Service */}

@@ -1,9 +1,9 @@
-# ✅ Checklist de Déploiement GISABO - Digital Ocean App Platform
+# ✅ Checklist de Déploiement K-AGESEKE - Digital Ocean App Platform
 
 ## 📋 Pré-Déploiement
 
 ### Code Repository
-- [ ] Code pushé sur GitHub : `https://github.com/yeoyedjande/gisabo-v2`
+- [ ] Code pushé sur GitHub : `https://github.com/yeoyedjande/k-ageseke-v2`
 - [ ] Branche principale prête : `main`
 - [ ] Tous les fichiers de configuration présents
 
@@ -19,18 +19,18 @@
 ### 1. Création de l'App
 - [ ] Compte Digital Ocean App Platform actif
 - [ ] App créée et connectée au repository GitHub
-- [ ] Repository sélectionné : `yeoyedjande/gisabo-v2`
+- [ ] Repository sélectionné : `yeoyedjande/k-ageseke-v2`
 - [ ] Branche sélectionnée : `main`
 
 ### 2. Base de Données
 - [ ] PostgreSQL Managed Database créée
-- [ ] Nom : `gisabo-db`
+- [ ] Nom : `k-ageseke-db`
 - [ ] Version PostgreSQL 15+
 - [ ] Variable `DATABASE_URL` auto-configurée
 
 ### 3. Variables d'Environnement
 #### Variables Automatiques (✅ Configurées par Digital Ocean)
-- [ ] `DATABASE_URL=${gisabo-db.DATABASE_URL}`
+- [ ] `DATABASE_URL=${k-ageseke-db.DATABASE_URL}`
 - [ ] `NODE_ENV=production`
 - [ ] `PORT=5000`
 
@@ -40,7 +40,7 @@
 - [ ] `SQUARE_LOCATION_ID` = [Location ID Square]
 - [ ] `VITE_SQUARE_APPLICATION_ID` = [Même que SQUARE_APPLICATION_ID]
 - [ ] `VITE_SQUARE_LOCATION_ID` = [Même que SQUARE_LOCATION_ID]
-- [ ] `OPENAI_API_KEY` = [Clé API OpenAI pour Assistant Gisabo]
+- [ ] `OPENAI_API_KEY` = [Clé API OpenAI pour Assistant K-Ageseke]
 - [ ] `SENDGRID_API_KEY` = [Clé API SendGrid pour emails]
 - [ ] `SESSION_SECRET` = [Secret 64+ caractères généré]
 - [ ] `JWT_SECRET` = [Secret JWT généré]
@@ -73,7 +73,7 @@
 ### Tests Fonctionnels
 - [ ] **Page d'accueil** : Site se charge correctement
 - [ ] **Authentification** : Connexion/inscription fonctionne
-- [ ] **Assistant Gisabo** : Chatbot répond correctement
+- [ ] **Assistant K-Ageseke** : Chatbot répond correctement
 - [ ] **Marketplace** : Produits s'affichent
 - [ ] **Services** : Liste des services disponible
 - [ ] **Transferts** : Interface de transfert accessible
@@ -121,7 +121,7 @@
 - [ ] Vérifier les CORS pour l'API Square
 - [ ] Consulter les logs d'erreur détaillés
 
-### Si l'Assistant Gisabo ne répond pas :
+### Si l'Assistant K-Ageseke ne répond pas :
 - [ ] Vérifier la clé OpenAI API
 - [ ] Tester l'endpoint `/api/chat`
 - [ ] Vérifier les limites de quota OpenAI
@@ -152,7 +152,7 @@
 
 ---
 
-**🎯 Objectif Final** : Application GISABO entièrement déployée et opérationnelle sur Digital Ocean App Platform avec toutes les fonctionnalités (transferts, marketplace, Assistant Gisabo) disponibles en production.
+**🎯 Objectif Final** : Application K-AGESEKE entièrement déployée et opérationnelle sur Digital Ocean App Platform avec toutes les fonctionnalités (transferts, marketplace, Assistant K-Ageseke) disponibles en production.
 
 **📅 Date de Déploiement** : _______________
 

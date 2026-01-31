@@ -1,4 +1,4 @@
-// Types partagés pour l'application mobile GISABO
+// Types partagés pour l'application mobile K-AGESEKE
 
 export interface User {
   id: number;

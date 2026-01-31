@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-// Script pour générer les secrets sécurisés pour GISABO
+// Script pour générer les secrets sécurisés pour K-AGESEKE
 // Exécutez avec : node generate-secrets.cjs
 
 const crypto = require('crypto');
 
-console.log('🔐 Génération des secrets sécurisés pour GISABO\n');
+console.log('🔐 Génération des secrets sécurisés pour K-AGESEKE\n');
 console.log('================================================\n');
 
 // Générer SESSION_SECRET (64 caractères)

@@ -58,8 +58,8 @@ export default function Contact() {
       icon: "fas fa-envelope",
       title: t('contact.methods.email.title'),
       description: t('contact.methods.email.description'),
-      info: "support@gisabogroup.ca",
-      action: "mailto:support@gisabogroup.ca",
+      info: "support@k-ageseke.com",
+      action: "mailto:support@k-ageseke.com",
       color: "primary"
     },
     {
@@ -353,7 +353,7 @@ export default function Contact() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <i className="fas fa-envelope text-red-600"></i>
-                    <span className="font-semibold text-red-800">urgent@gisabogroup.ca</span>
+                    <span className="font-semibold text-red-800">urgent@k-ageseke.com</span>
                   </div>
                 </div>
               </CardContent>
@@ -379,21 +379,21 @@ export default function Contact() {
                 country: "Canada",
                 address: "123 Rue Saint-Laurent, Montréal, QC H2X 2T3",
                 phone: "+1 (514) 123-4567",
-                email: "montreal@gisabogroup.ca"
+                email: "montreal@k-ageseke.com"
               },
               {
                 city: "Toronto", 
                 country: "Canada",
                 address: "456 Bay Street, Toronto, ON M5H 2Y4",
                 phone: "+1 (416) 987-6543",
-                email: "toronto@gisabogroup.ca"
+                email: "toronto@k-ageseke.com"
               },
               {
                 city: "Paris",
                 country: "France", 
                 address: "78 Avenue des Champs-Élysées, 75008 Paris",
                 phone: "+33 1 23 45 67 89",
-                email: "paris@gisabogroup.ca"
+                email: "paris@k-ageseke.com"
               }
             ].map((office, index) => (
               <Card key={index} className="hover:shadow-md transition-shadow">

@@ -1,4 +1,4 @@
-# 🚀 Déploiement GISABO Simplifié - Digital Ocean App Platform
+# 🚀 Déploiement K-AGESEKE Simplifié - Digital Ocean App Platform
 
 ## 💰 Configuration Économique (5$/mois minimum)
 
@@ -10,12 +10,12 @@
 ## 🎯 Déploiement Simplifié en 5 Étapes
 
 ### Étape 1: Préparer le Repository GitHub ✅
-Votre code est déjà prêt sur : `https://github.com/yeoyedjande/gisabo-v2`
+Votre code est déjà prêt sur : `https://github.com/yeoyedjande/k-ageseke-v2`
 
 ### Étape 2: Créer l'App Digital Ocean (2 min)
 1. Allez sur [Digital Ocean Apps](https://cloud.digitalocean.com/apps)
 2. Cliquez **"Create App"**
-3. Choisissez **"GitHub"** → **"yeoyedjande/gisabo-v2"** → **"main"**
+3. Choisissez **"GitHub"** → **"yeoyedjande/k-ageseke-v2"** → **"main"**
 4. **Digital Ocean détecte automatiquement** le fichier `.do/app.yaml`
 
 ### Étape 3: Vérifier la Configuration Auto-Détectée (1 min)
@@ -58,12 +58,12 @@ VITE_SQUARE_LOCATION_ID=votre-location-square
 
 ### URLs à Tester Immédiatement
 - `https://votre-app.ondigitalocean.app/health` → Doit retourner `{"status":"healthy"}`
-- `https://votre-app.ondigitalocean.app/` → Page d'accueil GISABO
+- `https://votre-app.ondigitalocean.app/` → Page d'accueil K-AGESEKE
 - `https://votre-app.ondigitalocean.app/marketplace` → Boutique
 
 ### Fonctionnalités Actives Immédiatement
 - ✅ **Site Web** complet
-- ✅ **Assistant Gisabo** (chatbot AI)
+- ✅ **Assistant K-Ageseke** (chatbot AI)
 - ✅ **Authentification** utilisateurs
 - ✅ **Marketplace** produits
 - ✅ **Transferts d'argent** (interface)
@@ -128,7 +128,7 @@ database size: db-s-dev-database  # 15$/mois
 
 Après déploiement, vous aurez :
 - **URL publique** : `https://votre-app.ondigitalocean.app`
-- **Application complète** GISABO fonctionnelle
+- **Application complète** K-AGESEKE fonctionnelle
 - **Coût prévisible** : ~20$/mois
 - **Extensibilité** facile selon vos besoins
 

@@ -41,7 +41,7 @@ export default function LoginScreen() {
       <View style={styles.content}>
         {/* Logo */}
         <View style={styles.logoContainer}>
-          <Text style={styles.logoText}>GISABO</Text>
+          <Text style={styles.logoText}>K-AGESEKE</Text>
           <Text style={styles.tagline}>Votre pont vers l'Afrique</Text>
         </View>
 

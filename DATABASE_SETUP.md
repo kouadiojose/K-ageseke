@@ -1,4 +1,4 @@
-# 🗄️ Configuration Base de Données - GISABO
+# 🗄️ Configuration Base de Données - K-AGESEKE
 
 ## 📊 Résumé de la Configuration
 
@@ -46,7 +46,7 @@ Oui, la base de données est **entièrement configurée** pour le déploiement D
 ```yaml
 # .do/app.yaml (déjà configuré)
 databases:
-- name: gisabo-db
+- name: k-ageseke-db
   engine: PG
   version: "15"
   size: basic-xxs
@@ -64,8 +64,8 @@ databases:
 # Variables dans .env
 PGHOST=postgres
 PGPORT=5432
-PGDATABASE=gisabo
-PGUSER=gisabo_user
+PGDATABASE=k-ageseke
+PGUSER=k-ageseke_user
 PGPASSWORD=votre_mot_de_passe_securise
 
 # Déploiement automatique
@@ -135,7 +135,7 @@ GET /api/health
 ### Cron Job (Droplet)
 ```bash
 # Ajouter dans crontab
-0 2 * * * /home/gisabo/gisabo-platform/backup.sh
+0 2 * * * /home/k-ageseke/k-ageseke-platform/backup.sh
 ```
 
 ---

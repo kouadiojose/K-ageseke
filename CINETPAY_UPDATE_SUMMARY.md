@@ -109,7 +109,7 @@ git push origin main
 
 ## 🎉 Résultat Final
 
-Après cette mise à jour, votre application GISABO supportera :
+Après cette mise à jour, votre application K-AGESEKE supportera :
 
 ✅ **Paiements Square** (marché occidental)  
 ✅ **Paiements CinetPay** (marché africain) - **NOUVEAU**  

@@ -69,7 +69,7 @@ export default function Login() {
                 <i className="fas fa-globe-africa text-white text-2xl"></i>
               </div>
               <CardTitle className="text-2xl font-bold font-poppins">Connexion</CardTitle>
-              <p className="text-gray-600">Connectez-vous à votre compte GISABO</p>
+              <p className="text-gray-600">Connectez-vous à votre compte K-AGESEKE</p>
             </CardHeader>
             
             <CardContent>

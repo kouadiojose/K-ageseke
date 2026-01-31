@@ -1,9 +1,9 @@
-# 🌊 Guide de Déploiement Digital Ocean App Platform - GISABO
+# 🌊 Guide de Déploiement Digital Ocean App Platform - K-AGESEKE
 
 ## 📋 Prérequis
 
 1. **Compte Digital Ocean** avec accès à App Platform
-2. **Code pushé sur GitHub** : https://github.com/yeoyedjande/gisabo-v2
+2. **Code pushé sur GitHub** : https://github.com/yeoyedjande/k-ageseke-v2
 3. **Tokens et clés API** prêts à configurer
 
 ## 🚀 Étapes de Déploiement
@@ -13,7 +13,7 @@
 1. Connectez-vous à votre tableau de bord Digital Ocean
 2. Allez dans **Apps** → **Create App**
 3. Sélectionnez **GitHub** comme source
-4. Choisissez votre repository : `yeoyedjande/gisabo-v2`
+4. Choisissez votre repository : `yeoyedjande/k-ageseke-v2`
 5. Sélectionnez la branche `main`
 
 ### Étape 2: Configuration automatique
@@ -26,7 +26,7 @@ Dans l'interface App Platform, ajoutez ces variables d'environnement :
 
 ```bash
 # 🗄️ BASE DE DONNÉES (sera fournie automatiquement par Digital Ocean)
-DATABASE_URL=${gisabo-db.DATABASE_URL}
+DATABASE_URL=${k-ageseke-db.DATABASE_URL}
 
 # 💳 SQUARE PAYMENT (PRODUCTION)
 SQUARE_ACCESS_TOKEN=votre_token_production_square
@@ -41,7 +41,7 @@ CINETPAY_API_KEY=69528412765f9bbf5cb3ac6.86470919
 CINETPAY_SITE_ID=105897933
 CINETPAY_CURRENCY=XOF
 
-# 🤖 OPENAI (pour Assistant Gisabo)
+# 🤖 OPENAI (pour Assistant K-Ageseke)
 OPENAI_API_KEY=votre_openai_api_key
 
 # 📧 SENDGRID (pour les emails)
@@ -78,7 +78,7 @@ Surveillez les logs pour vérifier :
 
 1. **Page d'accueil** : Vérifiez que le site se charge
 2. **Authentification** : Testez la connexion utilisateur
-3. **Assistant Gisabo** : Vérifiez que le chatbot fonctionne
+3. **Assistant K-Ageseke** : Vérifiez que le chatbot fonctionne
 4. **Paiements** : Testez les intégrations Square et CinetPay
 5. **Base de données** : Vérifiez les opérations CRUD
 

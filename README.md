@@ -1,4 +1,4 @@
-# GISABO - Plateforme Financière Cross-Border
+# K-AGESEKE - Plateforme Financiere Cross-Border
 
 Une plateforme financière dynamique permettant à la diaspora africaine d'accéder à des services financiers numériques innovants et une connectivité mondiale.
 
@@ -57,8 +57,8 @@ Une plateforme financière dynamique permettant à la diaspora africaine d'accé
 
 ### 1. Cloner le projet
 ```bash
-git clone https://github.com/votre-username/gisabo-platform.git
-cd gisabo-platform
+git clone https://github.com/votre-username/k-ageseke-platform.git
+cd k-ageseke-platform
 ```
 
 ### 2. Installation des dépendances
@@ -70,10 +70,10 @@ npm install
 Créer un fichier `.env` avec :
 ```bash
 # Base de données
-DATABASE_URL="postgresql://user:password@localhost:5432/gisabo"
+DATABASE_URL="postgresql://user:password@localhost:5432/k-ageseke"
 PGHOST=localhost
 PGPORT=5432
-PGDATABASE=gisabo
+PGDATABASE=k-ageseke
 PGUSER=your_user
 PGPASSWORD=your_password
 
@@ -98,7 +98,7 @@ SESSION_SECRET=your_secure_session_secret
 npm run db:push
 
 # Optionnel: Importer des données de test
-psql -d gisabo -f database_export.sql
+psql -d k-ageseke -f database_export.sql
 ```
 
 ### 5. Démarrage du serveur
@@ -208,8 +208,8 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 ## 📞 Support
 
 Pour toute question ou support :
-- Email: support@gisabo.ca
-- Website: https://gisabogroup.ca
+- Email: support@k-ageseke.com
+- Website: https://k-ageseke.com
 
 ## 🎯 Roadmap
 
@@ -221,4 +221,4 @@ Pour toute question ou support :
 
 ---
 
-**GISABO** - Connecter l'Afrique au monde, une transaction à la fois.
+**K-AGESEKE** - Connecter l'Afrique au monde, une transaction a la fois.

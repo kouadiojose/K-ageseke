@@ -4,7 +4,7 @@
 const { spawn } = require('child_process');
 const path = require('path');
 
-console.log('🚀 Démarrage de GISABO Mobile...');
+console.log('🚀 Démarrage de K-AGESEKE Mobile...');
 console.log('📱 Assurez-vous qu\'Expo Go est installé sur votre téléphone');
 console.log('🌐 Backend connecté à:', process.env.REPL_URL || 'localhost:5000');
 
@@ -15,7 +15,7 @@ const port = 8081;
 
 app.get('/', (req, res) => {
   res.json({
-    name: 'GISABO Mobile',
+    name: 'K-AGESEKE Mobile',
     version: '1.0.0',
     status: 'ready',
     backend: 'https://f3463d8a-3952-431c-97a1-a4d3cfd05c57-00-3sgbjbr0bblqq.riker.replit.dev',
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.listen(port, '0.0.0.0', () => {
   console.log(`
 ╔══════════════════════════════════════════════════════════════╗
-║                    GISABO MOBILE READY                       ║
+║                    K-AGESEKE MOBILE READY                       ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
 ║  📱 Ouvrez Expo Go sur votre iPhone                         ║
@@ -45,7 +45,7 @@ app.listen(port, '0.0.0.0', () => {
    • Marketplace (18 produits réels)
    • Transferts d'argent (taux de change authentiques)
    • Navigation complète
-   • Design GISABO
+   • Design K-AGESEKE
 
 ⚠️  Note: L'authentification nécessite vos identifiants réels
 `);

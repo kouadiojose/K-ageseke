@@ -13,7 +13,7 @@ git push origin main
 ### 2. Créer l'App sur Digital Ocean
 
 1. **Digital Ocean Console** → **App Platform** → **Create App**
-2. **GitHub** → Sélectionnez `gisabo-platform`
+2. **GitHub** → Sélectionnez `k-ageseke-platform`
 3. **Auto-detect** utilisera notre `.do/app.yaml` automatiquement
 4. **Review** → Vérifiez la configuration
 
@@ -63,10 +63,10 @@ Notre fichier `.do/app.yaml` configure automatiquement :
 ## 🚀 Après Déploiement
 
 ### URLs Disponibles :
-- **App Web** : `https://gisabo-platform-xxxxx.ondigitalocean.app`
-- **Mobile** : `https://gisabo-platform-xxxxx.ondigitalocean.app/mobile.html`
-- **Admin** : `https://gisabo-platform-xxxxx.ondigitalocean.app/admin/login`
-- **Health** : `https://gisabo-platform-xxxxx.ondigitalocean.app/api/health`
+- **App Web** : `https://k-ageseke-platform-xxxxx.ondigitalocean.app`
+- **Mobile** : `https://k-ageseke-platform-xxxxx.ondigitalocean.app/mobile.html`
+- **Admin** : `https://k-ageseke-platform-xxxxx.ondigitalocean.app/admin/login`
+- **Health** : `https://k-ageseke-platform-xxxxx.ondigitalocean.app/api/health`
 
 ### Tests de Fonctionnalité :
 1. ✅ Health check retourne `{"status": "healthy"}`
@@ -128,7 +128,7 @@ Scalable selon vos besoins.
 
 Après ces 3 étapes, vous aurez :
 
-✅ **Application GISABO 100% fonctionnelle**  
+✅ **Application K-AGESEKE 100% fonctionnelle**  
 ✅ **Base de données PostgreSQL managed**  
 ✅ **HTTPS automatique**  
 ✅ **Déploiement continu depuis GitHub**  

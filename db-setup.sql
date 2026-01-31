@@ -1,4 +1,4 @@
--- 🗄️ Script d'initialisation de la base de données pour GISABO
+-- 🗄️ Script d'initialisation de la base de données pour K-AGESEKE
 -- Ce script sera exécuté automatiquement lors du premier déploiement
 
 -- Création des extensions PostgreSQL nécessaires
@@ -158,7 +158,7 @@ ON CONFLICT DO NOTHING;
 
 -- Administrateur par défaut
 INSERT INTO "admins" ("username", "email", "password", "firstName", "lastName", "role") VALUES
-('admin', 'admin@gisabo.com', '$2b$10$hash_password_here', 'Admin', 'GISABO', 'super_admin')
+('admin', 'admin@k-ageseke.com', '$2b$10$hash_password_here', 'Admin', 'K-AGESEKE', 'super_admin')
 ON CONFLICT DO NOTHING;
 
 -- Taux de change par défaut
@@ -219,10 +219,10 @@ DROP TRIGGER IF EXISTS update_orders_updated_at ON "orders";
 CREATE TRIGGER update_orders_updated_at BEFORE UPDATE ON "orders" FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
 -- Commentaires pour documentation
-COMMENT ON TABLE "users" IS 'Table des utilisateurs de la plateforme GISABO';
+COMMENT ON TABLE "users" IS 'Table des utilisateurs de la plateforme K-AGESEKE';
 COMMENT ON TABLE "admins" IS 'Table des administrateurs avec différents niveaux d''accès';
 COMMENT ON TABLE "products" IS 'Catalogue des produits africains disponibles';
-COMMENT ON TABLE "services" IS 'Services offerts par GISABO';
+COMMENT ON TABLE "services" IS 'Services offerts par K-AGESEKE';
 COMMENT ON TABLE "transfers" IS 'Historique des transferts d''argent';
 COMMENT ON TABLE "orders" IS 'Commandes de produits des utilisateurs';
 COMMENT ON TABLE "exchange_rates" IS 'Taux de change pour les conversions monétaires';

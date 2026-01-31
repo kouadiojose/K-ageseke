@@ -255,7 +255,7 @@ export default function Dashboard() {
 
         {/* Quick Actions */}
         <div className="grid md:grid-cols-3 gap-4 mb-8">
-          <Link href="/gisabo">
+          <Link href="/k-ageseke">
             <Button className="w-full bg-primary hover:bg-primary-600 text-white h-14">
               <i className="fas fa-paper-plane mr-2"></i>
               {t('dashboard.quickActions.newTransfer')}
@@ -295,7 +295,7 @@ export default function Dashboard() {
                       <FilterIcon className="h-4 w-4" />
                       {t('dashboard.transfers.filters')}
                     </Button>
-                    <Link href="/gisabo">
+                    <Link href="/k-ageseke">
                       <Button
                         size="sm"
                         className="bg-primary hover:bg-primary-600"
@@ -441,7 +441,7 @@ export default function Dashboard() {
                         : t('dashboard.transfers.noTransfersText')}
                     </p>
                     {!dateFrom && !dateTo && (
-                      <Link href="/gisabo">
+                      <Link href="/k-ageseke">
                         <Button className="bg-primary hover:bg-primary-600">
                           {t('dashboard.quickActions.newTransfer')}
                         </Button>

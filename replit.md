@@ -1,8 +1,8 @@
 # Overview
 
-GISABO is a cross-border financial platform designed for the African diaspora to access digital financial services globally. The platform combines money transfer services with a marketplace for African products, supporting both web and mobile applications. It serves as a bridge connecting diaspora communities with their home countries, offering secure international transfers and authentic African product purchases.
+K-AGESEKE is a cross-border financial platform designed for the African diaspora to access digital financial services globally. The platform combines money transfer services with a marketplace for African products, supporting both web and mobile applications. It serves as a bridge connecting diaspora communities with their home countries, offering secure international transfers and authentic African product purchases.
 
-**New Feature: Assistant Gisabo** - An AI-powered chatbot integrated across the platform to provide instant customer support and answer questions about transfers, marketplace, and platform features using OpenAI's GPT-4o model.
+**New Feature: Assistant K-Ageseke** - An AI-powered chatbot integrated across the platform to provide instant customer support and answer questions about transfers, marketplace, and platform features using OpenAI's GPT-4o model.
 
 **Deployment Ready: Digital Ocean App Platform** - All configuration files prepared for production deployment including database setup, environment variables, health checks, and automated deployment scripts.
 
@@ -70,7 +70,7 @@ Preferred communication style: Simple, everyday language.
 ## Communication Services
 - **SendGrid**: Email delivery service for transactional emails
 - **SMTP Configuration**: PlanetHoster email service integration
-- **OpenAI API**: GPT-4o integration for Assistant Gisabo chatbot functionality
+- **OpenAI API**: GPT-4o integration for Assistant K-Ageseke chatbot functionality
 
 ## Development and Deployment
 - **Vite**: Build tool and development server for web application

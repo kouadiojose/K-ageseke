@@ -10,7 +10,7 @@ const path = require('path');
 // Configuration pour la production
 process.env.NODE_ENV = 'production';
 
-console.log('🚀 [GISABO] Démarrage en mode production...');
+console.log('🚀 [K-AGESEKE] Démarrage en mode production...');
 console.log(`📊 [INFO] Node.js version: ${process.version}`);
 console.log(`📊 [INFO] Environment: ${process.env.NODE_ENV}`);
 

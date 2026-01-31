@@ -1,6 +1,6 @@
-# 🌊 Guide de Déploiement Digital Ocean - GISABO
+# 🌊 Guide de Déploiement Digital Ocean - K-AGESEKE
 
-Ce guide vous accompagne étape par étape pour déployer votre application GISABO sur Digital Ocean.
+Ce guide vous accompagne étape par étape pour déployer votre application K-AGESEKE sur Digital Ocean.
 
 ## 🎯 Méthodes de Déploiement
 
@@ -24,12 +24,12 @@ Votre code est déjà prêt avec tous les fichiers nécessaires :
 1. **Connectez-vous à Digital Ocean**
 2. **Allez dans "Apps" → "Create App"**
 3. **Connectez votre GitHub** (poussez d'abord votre code sur GitHub)
-4. **Sélectionnez votre dépôt** `gisabo-platform`
+4. **Sélectionnez votre dépôt** `k-ageseke-platform`
 5. **Configurez l'application** :
 
 ```yaml
 # Configuration App Platform
-name: gisabo-platform
+name: k-ageseke-platform
 services:
 - name: web
   source_dir: /
@@ -115,24 +115,24 @@ chmod +x /usr/local/bin/docker-compose
 apt install git -y
 
 # Création d'un utilisateur pour l'application
-adduser gisabo
-usermod -aG docker gisabo
-su - gisabo
+adduser k-ageseke
+usermod -aG docker k-ageseke
+su - k-ageseke
 ```
 
 ### Étape 3: Déploiement de l'Application
 
 ```bash
 # Cloner votre dépôt
-git clone https://github.com/votre-username/gisabo-platform.git
-cd gisabo-platform
+git clone https://github.com/votre-username/k-ageseke-platform.git
+cd k-ageseke-platform
 
 # Copier et configurer les variables d'environnement
 cp .env.example .env
 nano .env  # Éditez avec vos vraies valeurs
 
 # Variables critiques à configurer :
-DATABASE_URL=postgresql://user:password@postgres:5432/gisabo
+DATABASE_URL=postgresql://user:password@postgres:5432/k-ageseke
 SQUARE_ACCESS_TOKEN=your_production_token
 SQUARE_APPLICATION_ID=your_app_id
 SQUARE_LOCATION_ID=your_location_id
@@ -241,10 +241,10 @@ docker-compose logs -f nginx
 
 ```bash
 # Sauvegarde automatique de la base de données
-docker-compose exec postgres pg_dump -U gisabo_user gisabo > backup_$(date +%Y%m%d_%H%M%S).sql
+docker-compose exec postgres pg_dump -U k-ageseke_user k-ageseke > backup_$(date +%Y%m%d_%H%M%S).sql
 
 # Script de sauvegarde automatique (crontab)
-0 2 * * * /home/gisabo/gisabo-platform/backup.sh
+0 2 * * * /home/k-ageseke/k-ageseke-platform/backup.sh
 ```
 
 ---
@@ -259,8 +259,8 @@ App Platform redéploie automatiquement à chaque push sur la branche main.
 
 ```bash
 # Se connecter au serveur
-ssh gisabo@your_droplet_ip
-cd gisabo-platform
+ssh k-ageseke@your_droplet_ip
+cd k-ageseke-platform
 
 # Récupérer les dernières modifications
 git pull origin main
@@ -357,10 +357,10 @@ echo $SQUARE_ACCESS_TOKEN # Doit commencer par "sq0atp"
 
 ## 🎉 Succès !
 
-Votre application GISABO est maintenant déployée en production sur Digital Ocean !
+Votre application K-AGESEKE est maintenant déployée en production sur Digital Ocean !
 
 **Support**: Pour toute question, contactez l'équipe de développement.
 
 ---
 
-**GISABO** - Connecter l'Afrique au monde, une transaction à la fois.
+**K-AGESEKE** - Connecter l'Afrique au monde, une transaction à la fois.

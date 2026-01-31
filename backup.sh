@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Script de sauvegarde automatique pour GISABO
+# Script de sauvegarde automatique pour K-AGESEKE
 # Usage: ./backup.sh
 
 set -e
 
 # Configuration
-BACKUP_DIR="/home/gisabo/backups"
+BACKUP_DIR="/home/k-ageseke/backups"
 DATE=$(date +%Y%m%d_%H%M%S)
-DB_BACKUP_FILE="gisabo_backup_${DATE}.sql"
-APP_BACKUP_FILE="gisabo_app_backup_${DATE}.tar.gz"
+DB_BACKUP_FILE="k-ageseke_backup_${DATE}.sql"
+APP_BACKUP_FILE="k-ageseke_app_backup_${DATE}.tar.gz"
 
 # Couleurs pour l'affichage
 GREEN='\033[0;32m'
@@ -32,11 +32,11 @@ log_error() {
 # Créer le dossier de sauvegarde
 mkdir -p "$BACKUP_DIR"
 
-log_info "Démarrage de la sauvegarde GISABO - $DATE"
+log_info "Démarrage de la sauvegarde K-AGESEKE - $DATE"
 
 # Sauvegarde de la base de données
 log_info "Sauvegarde de la base de données..."
-if docker-compose exec -T postgres pg_dump -U gisabo_user gisabo > "$BACKUP_DIR/$DB_BACKUP_FILE"; then
+if docker-compose exec -T postgres pg_dump -U k-ageseke_user k-ageseke > "$BACKUP_DIR/$DB_BACKUP_FILE"; then
     log_info "✅ Base de données sauvegardée: $DB_BACKUP_FILE"
 else
     log_error "❌ Échec de la sauvegarde de la base de données"
@@ -69,11 +69,11 @@ fi
 
 # Nettoyage des anciennes sauvegardes (garder 7 jours)
 log_info "Nettoyage des anciennes sauvegardes..."
-find "$BACKUP_DIR" -name "gisabo_*" -type f -mtime +7 -delete 2>/dev/null || true
+find "$BACKUP_DIR" -name "k-ageseke_*" -type f -mtime +7 -delete 2>/dev/null || true
 
 # Statistiques
 BACKUP_SIZE=$(du -sh "$BACKUP_DIR" | cut -f1)
-BACKUP_COUNT=$(ls -1 "$BACKUP_DIR"/gisabo_backup_*.sql 2>/dev/null | wc -l)
+BACKUP_COUNT=$(ls -1 "$BACKUP_DIR"/k-ageseke_backup_*.sql 2>/dev/null | wc -l)
 
 log_info "📊 Statistiques de sauvegarde:"
 echo "  - Taille totale: $BACKUP_SIZE"
@@ -84,5 +84,5 @@ log_info "✅ Sauvegarde terminée avec succès !"
 
 # Envoyer une notification par email si configuré
 if [ ! -z "$BACKUP_NOTIFICATION_EMAIL" ]; then
-    echo "Sauvegarde GISABO terminée - $DATE" | mail -s "Backup Success" "$BACKUP_NOTIFICATION_EMAIL" 2>/dev/null || true
+    echo "Sauvegarde K-AGESEKE terminée - $DATE" | mail -s "Backup Success" "$BACKUP_NOTIFICATION_EMAIL" 2>/dev/null || true
 fi

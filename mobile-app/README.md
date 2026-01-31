@@ -1,6 +1,6 @@
-# GISABO Mobile App
+# K-AGESEKE Mobile App
 
-Application mobile React Native pour GISABO Group, connectée au backend existant.
+Application mobile React Native pour K-AGESEKE Group, connectée au backend existant.
 
 ## Structure du projet
 

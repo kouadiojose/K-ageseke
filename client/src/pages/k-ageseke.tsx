@@ -34,7 +34,7 @@ const sendingCountries = [
   { code: "SE", name: "Suède", currency: "SEK", flag: "🇸🇪" },
 ];
 
-export default function Gisabo() {
+export default function KAgeseke() {
   const [, navigate] = useLocation();
   const { toast } = useToast();
   const { t } = useLanguage();
@@ -63,8 +63,8 @@ export default function Gisabo() {
   useEffect(() => {
     if (!authenticated) {
       toast({
-        title: t("gisabo.loginRequired"),
-        description: t("gisabo.loginRequiredDesc"),
+        title: t("kAgeseke.loginRequired"),
+        description: t("kAgeseke.loginRequiredDesc"),
         variant: "destructive",
       });
       navigate("/login");
@@ -120,7 +120,7 @@ export default function Gisabo() {
     mutationFn: async (transferData: any) => {
       const token = getAuthToken();
       if (!token) {
-        throw new Error(t("gisabo.loginRequiredDesc"));
+        throw new Error(t("kAgeseke.loginRequiredDesc"));
       }
 
       const response = await fetch("/api/transfers", {
@@ -146,7 +146,7 @@ export default function Gisabo() {
     },
     onError: (error: any) => {
       toast({
-        title: t("gisabo.error"),
+        title: t("kAgeseke.error"),
         description: error.message,
         variant: "destructive",
       });
@@ -163,7 +163,7 @@ export default function Gisabo() {
     }) => {
       const token = getAuthToken();
       if (!token) {
-        throw new Error(t("gisabo.loginRequiredPayment"));
+        throw new Error(t("kAgeseke.loginRequiredPayment"));
       }
 
       const response = await fetch(`/api/transfers/${transferId}/pay`, {
@@ -194,8 +194,8 @@ export default function Gisabo() {
           destinationCountry: selectedDestinationCountry?.name || "",
           deliveryMethod:
             formData.deliveryMethod === "mobile"
-              ? t("gisabo.mobileMoney")
-              : t("gisabo.bankAccount"),
+              ? t("kAgeseke.mobileMoney")
+              : t("kAgeseke.bankAccount"),
         },
         paymentId: paymentResult.paymentId || "",
         timestamp: paymentResult.timestamp || new Date().toISOString(),
@@ -207,7 +207,7 @@ export default function Gisabo() {
     },
     onError: (error: any) => {
       toast({
-        title: t("gisabo.paymentError"),
+        title: t("kAgeseke.paymentError"),
         description: error.message,
         variant: "destructive",
       });
@@ -244,8 +244,8 @@ export default function Gisabo() {
         !formData.amount
       ) {
         toast({
-          title: t("gisabo.incompleteForm"),
-          description: t("gisabo.incompleteFormDesc"),
+          title: t("kAgeseke.incompleteForm"),
+          description: t("kAgeseke.incompleteFormDesc"),
           variant: "destructive",
         });
         return;
@@ -253,8 +253,8 @@ export default function Gisabo() {
 
       if (parseFloat(formData.amount) < 1) {
         toast({
-          title: t("gisabo.invalidAmount"),
-          description: t("gisabo.invalidAmountDesc").replace(
+          title: t("kAgeseke.invalidAmount"),
+          description: t("kAgeseke.invalidAmountDesc").replace(
             "{currency}",
             formData.sendingCurrency,
           ),
@@ -314,7 +314,7 @@ export default function Gisabo() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold font-poppins mb-4">
-              Transfert d'Argent <span className="text-secondary">GISABO</span>
+              Transfert d'Argent <span className="text-secondary">K-AGESEKE</span>
             </h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
               Service de transfert rapide, sécurisé et abordable vers l'Afrique
@@ -324,9 +324,9 @@ export default function Gisabo() {
           {/* Progress Steps */}
           <div className="flex justify-center items-center space-x-4 max-w-2xl mx-auto">
             {[
-              { num: 1, label: t("gisabo.inputForm") },
-              { num: 2, label: t("gisabo.summary") },
-              { num: 3, label: t("gisabo.squarePayment") },
+              { num: 1, label: t("kAgeseke.inputForm") },
+              { num: 2, label: t("kAgeseke.summary") },
+              { num: 3, label: t("kAgeseke.squarePayment") },
             ].map((stepItem, index) => (
               <div key={stepItem.num} className="flex items-center">
                 <div
@@ -371,10 +371,10 @@ export default function Gisabo() {
                     <CardHeader className="bg-primary/5 border-b">
                       <CardTitle className="font-poppins text-xl flex items-center">
                         <i className="fas fa-user-check text-primary mr-3"></i>
-                        {t("gisabo.recipientDetails")}
+                        {t("kAgeseke.recipientDetails")}
                       </CardTitle>
                       <p className="text-gray-600">
-                        {t("gisabo.recipientInfo")}
+                        {t("kAgeseke.recipientInfo")}
                       </p>
                     </CardHeader>
                     <CardContent className="p-8">
@@ -384,7 +384,7 @@ export default function Gisabo() {
                             htmlFor="recipientFirstName"
                             className="text-base font-semibold"
                           >
-                            {t("gisabo.firstName")} *
+                            {t("kAgeseke.firstName")} *
                           </Label>
                           <Input
                             id="recipientFirstName"
@@ -392,7 +392,7 @@ export default function Gisabo() {
                             onChange={(e) =>
                               handleChange("recipientFirstName", e.target.value)
                             }
-                            placeholder={t("gisabo.firstNamePlaceholder")}
+                            placeholder={t("kAgeseke.firstNamePlaceholder")}
                             className="mt-2 h-12 text-base"
                             required
                           />
@@ -402,7 +402,7 @@ export default function Gisabo() {
                             htmlFor="recipientLastName"
                             className="text-base font-semibold"
                           >
-                            {t("gisabo.lastName")} *
+                            {t("kAgeseke.lastName")} *
                           </Label>
                           <Input
                             id="recipientLastName"
@@ -410,7 +410,7 @@ export default function Gisabo() {
                             onChange={(e) =>
                               handleChange("recipientLastName", e.target.value)
                             }
-                            placeholder={t("gisabo.lastNamePlaceholder")}
+                            placeholder={t("kAgeseke.lastNamePlaceholder")}
                             className="mt-2 h-12 text-base"
                             required
                           />
@@ -422,7 +422,7 @@ export default function Gisabo() {
                           htmlFor="recipientPhone"
                           className="text-base font-semibold"
                         >
-                          {t("gisabo.phone")} *
+                          {t("kAgeseke.phone")} *
                         </Label>
                         <Input
                           id="recipientPhone"
@@ -431,7 +431,7 @@ export default function Gisabo() {
                           onChange={(e) =>
                             handleChange("recipientPhone", e.target.value)
                           }
-                          placeholder={t("gisabo.phonePlaceholder")}
+                          placeholder={t("kAgeseke.phonePlaceholder")}
                           className="mt-2 h-12 text-base"
                           required
                         />
@@ -447,10 +447,10 @@ export default function Gisabo() {
                     <CardHeader className="bg-secondary/5 border-b">
                       <CardTitle className="font-poppins text-xl flex items-center">
                         <i className="fas fa-exchange-alt text-secondary mr-3"></i>
-                        {t("gisabo.transactionDetails")}
+                        {t("kAgeseke.transactionDetails")}
                       </CardTitle>
                       <p className="text-gray-600">
-                        {t("gisabo.transferInfo")}
+                        {t("kAgeseke.transferInfo")}
                       </p>
                     </CardHeader>
                     <CardContent className="p-8">
@@ -460,7 +460,7 @@ export default function Gisabo() {
                             htmlFor="sendingCountry"
                             className="text-base font-semibold"
                           >
-                            {t("gisabo.sendingCountry")} *
+                            {t("kAgeseke.sendingCountry")} *
                           </Label>
                           <Select
                             value={formData.sendingCountry}
@@ -489,7 +489,7 @@ export default function Gisabo() {
                             htmlFor="destinationCountry"
                             className="text-base font-semibold"
                           >
-                            {t("gisabo.destinationCountry")} *
+                            {t("kAgeseke.destinationCountry")} *
                           </Label>
                           <Select
                             value={formData.destinationCountry}
@@ -500,7 +500,7 @@ export default function Gisabo() {
                             <SelectTrigger className="mt-2 h-12 text-base">
                               <SelectValue
                                 placeholder={t(
-                                  "gisabo.selectCountryPlaceholder",
+                                  "kAgeseke.selectCountryPlaceholder",
                                 )}
                               />
                             </SelectTrigger>
@@ -521,7 +521,7 @@ export default function Gisabo() {
                       <div className="grid md:grid-cols-2 gap-6 mt-6">
                         <div>
                           <Label className="text-base font-semibold">
-                            {t("gisabo.sendingCurrency")}
+                            {t("kAgeseke.sendingCurrency")}
                           </Label>
                           <div className="mt-2 h-12 px-4 py-3 bg-gray-50 border rounded-md flex items-center">
                             <span className="text-base font-medium">
@@ -534,12 +534,12 @@ export default function Gisabo() {
                         </div>
                         <div>
                           <Label className="text-base font-semibold">
-                            {t("gisabo.receivingCurrency")}
+                            {t("kAgeseke.receivingCurrency")}
                           </Label>
                           <div className="mt-2 h-12 px-4 py-3 bg-gray-50 border rounded-md flex items-center">
                             <span className="text-base font-medium">
                               {formData.receivingCurrency ||
-                                t("gisabo.selectCountry")}
+                                t("kAgeseke.selectCountry")}
                             </span>
                             {selectedDestinationCountry && (
                               <span className="text-gray-500 ml-2">
@@ -555,7 +555,7 @@ export default function Gisabo() {
                           htmlFor="amount"
                           className="text-base font-semibold"
                         >
-                          {t("gisabo.amountToSend")} *
+                          {t("kAgeseke.amountToSend")} *
                         </Label>
                         <div className="relative mt-2">
                           <Input
@@ -579,7 +579,7 @@ export default function Gisabo() {
                           </div>
                         </div>
                         <p className="text-sm text-gray-500 mt-1">
-                          {t("gisabo.amountRange").replace(
+                          {t("kAgeseke.amountRange").replace(
                             "{currency}",
                             formData.sendingCurrency,
                           )}
@@ -588,7 +588,7 @@ export default function Gisabo() {
 
                       <div className="mt-6">
                         <Label className="text-base font-semibold">
-                          {t("gisabo.deliveryMethod")} *
+                          {t("kAgeseke.deliveryMethod")} *
                         </Label>
                         <RadioGroup
                           value={formData.deliveryMethod}
@@ -610,10 +610,10 @@ export default function Gisabo() {
                               <div className="text-center">
                                 <i className="fas fa-mobile-alt text-primary text-2xl mb-2 block"></i>
                                 <p className="font-semibold text-base mb-1">
-                                  {t("gisabo.mobileMoney")}
+                                  {t("kAgeseke.mobileMoney")}
                                 </p>
                                 <p className="text-xs text-gray-600">
-                                  {t("gisabo.onMobilePhone")}
+                                  {t("kAgeseke.onMobilePhone")}
                                 </p>
                               </div>
                             </Label>
@@ -631,10 +631,10 @@ export default function Gisabo() {
                               <div className="text-center">
                                 <i className="fas fa-university text-primary text-2xl mb-2 block"></i>
                                 <p className="font-semibold text-base mb-1">
-                                  {t("gisabo.bankAccount")}
+                                  {t("kAgeseke.bankAccount")}
                                 </p>
                                 <p className="text-xs text-gray-600">
-                                  {t("gisabo.bankTransfer")}
+                                  {t("kAgeseke.bankTransfer")}
                                 </p>
                               </div>
                             </Label>
@@ -698,7 +698,7 @@ export default function Gisabo() {
                           htmlFor="note"
                           className="text-base font-semibold"
                         >
-                          {t("gisabo.noteOptional")}
+                          {t("kAgeseke.noteOptional")}
                         </Label>
                         <Textarea
                           id="note"
@@ -709,7 +709,7 @@ export default function Gisabo() {
                           rows={3}
                         />
                         <p className="text-sm text-gray-500 mt-1">
-                          {t("gisabo.noteDescription")}
+                          {t("kAgeseke.noteDescription")}
                         </p>
                       </div>
                     </CardContent>
@@ -724,10 +724,10 @@ export default function Gisabo() {
                         <CardHeader className="bg-gradient-to-r from-green-100 to-blue-100 border-b">
                           <CardTitle className="font-poppins text-lg flex items-center">
                             <i className="fas fa-calculator text-green-600 mr-2"></i>
-                            {t("gisabo.calculationSummary")}
+                            {t("kAgeseke.calculationSummary")}
                           </CardTitle>
                           <p className="text-sm text-gray-600">
-                            {t("gisabo.realtimePreview")}
+                            {t("kAgeseke.realtimePreview")}
                           </p>
                         </CardHeader>
                         <CardContent className="p-6 space-y-6">
@@ -736,7 +736,7 @@ export default function Gisabo() {
                               <i className="fas fa-coins text-primary"></i>
                             </div>
                             <p className="text-sm font-medium text-gray-600 mb-1">
-                              {t("gisabo.amountEntered")}
+                              {t("kAgeseke.amountEntered")}
                             </p>
                             <p className="text-xl font-bold text-primary">
                               {calculation.sendAmount}
@@ -751,7 +751,7 @@ export default function Gisabo() {
                               <i className="fas fa-percent text-green-600"></i>
                             </div>
                             <p className="text-sm font-medium text-gray-600 mb-1">
-                              {t("gisabo.serviceFees")}
+                              {t("kAgeseke.serviceFees")}
                             </p>
                             <p className="text-xl font-bold text-green-600">
                               {calculation.fees}
@@ -764,7 +764,7 @@ export default function Gisabo() {
                               <i className="fas fa-gift text-secondary"></i>
                             </div>
                             <p className="text-sm font-medium text-gray-600 mb-1">
-                              {t("gisabo.amountToReceive")}
+                              {t("kAgeseke.amountToReceive")}
                             </p>
                             <p className="text-xl font-bold text-secondary">
                               {calculation.receivedAmount}
@@ -777,7 +777,7 @@ export default function Gisabo() {
                           <div className="p-4 bg-white rounded-xl border border-gray-200">
                             <div className="text-center">
                               <span className="text-base font-semibold text-gray-700 block">
-                                {t("gisabo.totalToPay")}
+                                {t("kAgeseke.totalToPay")}
                               </span>
                               <span className="text-2xl font-bold text-primary">
                                 {calculation.total} {formData.sendingCurrency}
@@ -792,7 +792,7 @@ export default function Gisabo() {
                             className="w-full bg-primary hover:bg-primary-600 text-white py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
                           >
                             <i className="fas fa-arrow-right mr-2"></i>
-                            {t("gisabo.continue")}
+                            {t("kAgeseke.continue")}
                           </Button>
                         </CardContent>
                       </Card>
@@ -801,17 +801,17 @@ export default function Gisabo() {
                         <CardHeader className="bg-gray-50 border-b">
                           <CardTitle className="font-poppins text-lg flex items-center text-gray-600">
                             <i className="fas fa-info-circle text-gray-400 mr-2"></i>
-                            {t("gisabo.calculationSummary")}
+                            {t("kAgeseke.calculationSummary")}
                           </CardTitle>
                         </CardHeader>
                         <CardContent className="p-6">
                           <div className="text-center text-gray-500">
                             <i className="fas fa-calculator text-4xl mb-4 opacity-30"></i>
                             <p className="text-base mb-4">
-                              {t("gisabo.enterAmountInfo")}
+                              {t("kAgeseke.enterAmountInfo")}
                             </p>
                             <p className="text-sm">
-                              {t("gisabo.calculationAppear")}
+                              {t("kAgeseke.calculationAppear")}
                             </p>
                           </div>
                         </CardContent>
@@ -831,10 +831,10 @@ export default function Gisabo() {
               <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50 border-b">
                 <CardTitle className="font-poppins text-2xl flex items-center">
                   <i className="fas fa-clipboard-check text-blue-600 mr-3"></i>
-                  {t("gisabo.transferSummary")}
+                  {t("kAgeseke.transferSummary")}
                 </CardTitle>
                 <p className="text-gray-600 text-lg">
-                  {t("gisabo.verifyInfo")}
+                  {t("kAgeseke.verifyInfo")}
                 </p>
               </CardHeader>
               <CardContent className="p-8 space-y-8">
@@ -896,8 +896,8 @@ export default function Gisabo() {
                           </p>
                           <p className="font-semibold text-lg">
                             {formData.deliveryMethod === "cash"
-                              ? t("gisabo.cashWithdrawal")
-                              : t("gisabo.mobileMoney")}
+                              ? t("kAgeseke.cashWithdrawal")
+                              : t("kAgeseke.mobileMoney")}
                           </p>
                         </div>
                       </div>
@@ -922,7 +922,7 @@ export default function Gisabo() {
                 <div>
                   <h4 className="font-semibold text-xl text-gray-900 mb-4 flex items-center">
                     <i className="fas fa-calculator text-green-600 mr-2"></i>
-                    {t("gisabo.financialDetails")}
+                    {t("kAgeseke.financialDetails")}
                   </h4>
 
                   <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl border border-green-200">
@@ -931,7 +931,7 @@ export default function Gisabo() {
                         <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
                           <div className="flex items-center space-x-3">
                             <i className="fas fa-coins text-primary"></i>
-                            <span>{t("gisabo.amountToSend")}</span>
+                            <span>{t("kAgeseke.amountToSend")}</span>
                           </div>
                           <span className="font-semibold text-lg">
                             {calculation.sendAmount} {formData.sendingCurrency}
@@ -1050,7 +1050,7 @@ export default function Gisabo() {
                 className="px-8 py-3 border-gray-300 hover:bg-gray-50"
               >
                 <i className="fas fa-arrow-left mr-2"></i>
-                {t("gisabo.backToForm")}
+                {t("kAgeseke.backToForm")}
               </Button>
 
               <div className="text-center">
@@ -1071,7 +1071,7 @@ export default function Gisabo() {
                   ) : (
                     <>
                       <i className="fas fa-credit-card mr-3"></i>
-                      {t("gisabo.confirmPayment")}
+                      {t("kAgeseke.confirmPayment")}
                     </>
                   )}
                 </Button>
@@ -1109,12 +1109,12 @@ export default function Gisabo() {
 
                   <div className="bg-white p-4 rounded-lg border">
                     <p className="text-sm text-gray-600 mb-1">
-                      {t("gisabo.deliveryMethod")}
+                      {t("kAgeseke.deliveryMethod")}
                     </p>
                     <p className="font-semibold">
                       {formData.deliveryMethod === "mobile"
-                        ? t("gisabo.mobileMoney")
-                        : t("gisabo.bankAccount")}
+                        ? t("kAgeseke.mobileMoney")
+                        : t("kAgeseke.bankAccount")}
                     </p>
                     {formData.deliveryMethod === "bank" &&
                       formData.bankName && (
@@ -1148,7 +1148,7 @@ export default function Gisabo() {
               }}
               onPaymentError={(error) => {
                 toast({
-                  title: t("gisabo.paymentError"),
+                  title: t("kAgeseke.paymentError"),
                   description: error,
                   variant: "destructive",
                 });
@@ -1167,7 +1167,7 @@ export default function Gisabo() {
                   <p className="text-sm text-yellow-700">
                     Notre équipe est disponible 24h/24 pour vous assister.
                     Contactez-nous au <strong>+1 (613) 762-6686</strong> ou par
-                    email à <strong>gisabonet@gmail.com</strong>
+                    email à <strong>contact@k-ageseke.com</strong>
                   </p>
                 </div>
               </div>
@@ -1182,7 +1182,7 @@ export default function Gisabo() {
                 className="px-8 py-3 border-gray-300 hover:bg-gray-50"
               >
                 <i className="fas fa-arrow-left mr-2"></i>
-                {t("gisabo.backToSummary")}
+                {t("kAgeseke.backToSummary")}
               </Button>
             </div>
           </div>

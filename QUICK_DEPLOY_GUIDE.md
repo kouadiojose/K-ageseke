@@ -1,10 +1,10 @@
-# 🚀 Guide Rapide de Déploiement GISABO sur Digital Ocean
+# 🚀 Guide Rapide de Déploiement K-AGESEKE sur Digital Ocean
 
 ## 📋 Résumé - Tout est Prêt !
 
-Votre application GISABO est maintenant **100% prête** pour le déploiement sur Digital Ocean App Platform avec :
+Votre application K-AGESEKE est maintenant **100% prête** pour le déploiement sur Digital Ocean App Platform avec :
 
-✅ **Assistant Gisabo AI** intégré avec OpenAI GPT-4o  
+✅ **Assistant K-Ageseke AI** intégré avec OpenAI GPT-4o  
 ✅ **Système de paiement** Square + CinetPay configuré  
 ✅ **Marketplace** produits africains  
 ✅ **Transferts d'argent** internationaux  
@@ -17,7 +17,7 @@ Votre application GISABO est maintenant **100% prête** pour le déploiement sur
 ### Étape 1: Créer l'App Digital Ocean (5 min)
 1. Connectez-vous à [Digital Ocean](https://cloud.digitalocean.com)
 2. Allez dans **Apps** → **Create App**
-3. Sélectionnez **GitHub** et choisissez : `yeoyedjande/gisabo-v2`
+3. Sélectionnez **GitHub** et choisissez : `yeoyedjande/k-ageseke-v2`
 4. Branche : `main`
 5. **Digital Ocean détectera automatiquement** le fichier `.do/app.yaml`
 
@@ -32,7 +32,7 @@ SQUARE_LOCATION_ID=[votre_location_id_square]
 VITE_SQUARE_APPLICATION_ID=[même_que_ci-dessus]
 VITE_SQUARE_LOCATION_ID=[même_que_ci-dessus]
 
-# OpenAI pour Assistant Gisabo
+# OpenAI pour Assistant K-Ageseke
 OPENAI_API_KEY=[votre_clé_openai]
 
 # SendGrid pour emails
@@ -61,7 +61,7 @@ Votre app sera disponible sur : `https://[nom-app].ondigitalocean.app`
 - `/` - Page d'accueil
 - `/marketplace` - Boutique produits
 - `/transfer` - Transferts d'argent
-- Assistant Gisabo (bouton chatbot) sur toutes les pages
+- Assistant K-Ageseke (bouton chatbot) sur toutes les pages
 
 ## 🛠️ Variables Préconfigurées (Déjà Prêtes)
 
@@ -73,14 +73,14 @@ CINETPAY_API_KEY=69528412765f9bbf5cb3ac6.86470919
 CINETPAY_SITE_ID=105897933
 
 # Application (Auto-configurées par Digital Ocean)
-DATABASE_URL=${gisabo-db.DATABASE_URL}
+DATABASE_URL=${k-ageseke-db.DATABASE_URL}
 NODE_ENV=production
 PORT=5000
 ```
 
 ## 🎉 Fonctionnalités Actives Immédiatement
 
-1. **🤖 Assistant Gisabo** - Chatbot AI en français/anglais
+1. **🤖 Assistant K-Ageseke** - Chatbot AI en français/anglais
 2. **💳 Paiements Square** - Cartes + Afterpay
 3. **💰 Paiements CinetPay** - Mobile money Afrique
 4. **🛒 Marketplace** - Produits africains authentiques
@@ -110,4 +110,4 @@ PORT=5000
 
 **Temps estimé total :** 30 minutes maximum
 
-**Résultat :** Application GISABO complète en production avec toutes les fonctionnalités actives.
+**Résultat :** Application K-AGESEKE complète en production avec toutes les fonctionnalités actives.

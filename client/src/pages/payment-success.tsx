@@ -249,7 +249,7 @@ export default function PaymentSuccess() {
             {/* En-tête compact */}
             <div className="flex justify-between items-center border-b-2 border-gray-300 pb-4 mb-4">
               <div>
-                <h1 className="text-xl font-bold">GISABO GROUP</h1>
+                <h1 className="text-xl font-bold">K-AGESEKE GROUP</h1>
                 <p className="text-xs text-gray-600">Services de transfert d'argent</p>
               </div>
               <div className="text-right text-xs">
@@ -328,7 +328,7 @@ export default function PaymentSuccess() {
 
             {/* Pied de page compact */}
             <div className="border-t border-gray-300 pt-2 text-center text-xs text-gray-600">
-              <p><strong>GISABO GROUP</strong> - Services financiers sécurisés | Licence: FIN-2024-GISABO-001</p>
+              <p><strong>K-AGESEKE GROUP</strong> - Services financiers sécurisés | Licence: FIN-2024-K-AGESEKE-001</p>
               <p>Ce reçu constitue une preuve officielle de votre transaction</p>
             </div>
           </div>
@@ -350,7 +350,7 @@ export default function PaymentSuccess() {
               asChild 
               className="flex-1"
             >
-              <Link href="/gisabo">
+              <Link href="/k-ageseke">
                 Nouveau transfert
               </Link>
             </Button>

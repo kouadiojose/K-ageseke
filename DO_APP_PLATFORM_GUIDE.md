@@ -1,4 +1,4 @@
-# 🌊 Guide Digital Ocean App Platform - GISABO
+# 🌊 Guide Digital Ocean App Platform - K-AGESEKE
 
 ## ⚡ Déploiement en 5 Étapes
 
@@ -29,7 +29,7 @@ git push origin main
 1. **Connectez-vous à Digital Ocean**
 2. **App Platform → Create App**
 3. **Source → GitHub** (connectez votre compte)
-4. **Sélectionnez votre dépôt**: `gisabo-platform`
+4. **Sélectionnez votre dépôt**: `k-ageseke-platform`
 5. **Branch**: `main`
 6. **Auto-detect configuration**: Digital Ocean détectera `.do/app.yaml`
 
@@ -92,7 +92,7 @@ Digital Ocean va :
 ### Domaine Personnalisé
 
 Après déploiement, dans **App Settings → Domains** :
-1. Ajouter votre domaine (ex: `app.gisabogroup.ca`)
+1. Ajouter votre domaine (ex: `app.k-ageseke.com`)
 2. Configurer les DNS selon les instructions DO
 3. SSL automatique via Let's Encrypt
 
@@ -111,10 +111,10 @@ instance_count: 1              # Une instance
 
 Une fois déployé, votre app sera disponible sur :
 
-- **Web App**: `https://gisabo-platform-xxxxx.ondigitalocean.app`
-- **Mobile**: `https://gisabo-platform-xxxxx.ondigitalocean.app/mobile.html`
-- **Admin**: `https://gisabo-platform-xxxxx.ondigitalocean.app/admin/login`
-- **API Health**: `https://gisabo-platform-xxxxx.ondigitalocean.app/api/health`
+- **Web App**: `https://k-ageseke-platform-xxxxx.ondigitalocean.app`
+- **Mobile**: `https://k-ageseke-platform-xxxxx.ondigitalocean.app/mobile.html`
+- **Admin**: `https://k-ageseke-platform-xxxxx.ondigitalocean.app/admin/login`
+- **API Health**: `https://k-ageseke-platform-xxxxx.ondigitalocean.app/api/health`
 
 ---
 
@@ -247,7 +247,7 @@ SQUARE_ACCESS_TOKEN=sq0atp-... # Token production
 - Community support
 - Status page temps réel
 
-**GISABO Support** :
+**K-AGESEKE Support** :
 - Guide complet dans ce repository
 - Issues GitHub pour bugs
 - Documentation technique dans `/docs`
@@ -265,4 +265,4 @@ Après déploiement, vous aurez :
 ✅ **Monitoring complet** intégré  
 ✅ **Déploiement continu** depuis GitHub  
 
-**Votre plateforme GISABO sera prête pour la production !**
+**Votre plateforme K-AGESEKE sera prête pour la production !**

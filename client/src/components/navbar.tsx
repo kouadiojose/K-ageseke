@@ -67,10 +67,10 @@ export default function Navbar() {
         {t("nav.services")}
       </Link>
       <Link
-        href="/gisabo"
+        href="/k-ageseke"
         className="text-gray-700 hover:text-primary font-medium transition-colors"
       >
-        Gisabo
+        K-Ageseke
       </Link>
       <Link
         href="/fonctionnement"
@@ -95,8 +95,8 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-2">
             <img
               width="150"
-              src="/assets/logo_gisabo.png"
-              alt="Gisabo Group"
+              src="/assets/logo_k-ageseke.png"
+              alt="K-Ageseke Group"
               className="h-10 w-auto"
             />
             <div></div>

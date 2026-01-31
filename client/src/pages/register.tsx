@@ -46,7 +46,7 @@ export default function Register() {
       setAuthToken(data.token);
       toast({
         title: "Inscription réussie",
-        description: `Bienvenue sur GISABO, ${data.user.firstName}!`,
+        description: `Bienvenue sur K-AGESEKE, ${data.user.firstName}!`,
       });
       
       navigate("/dashboard");
@@ -80,7 +80,7 @@ export default function Register() {
                 <i className="fas fa-globe-africa text-white text-2xl"></i>
               </div>
               <CardTitle className="text-2xl font-bold font-poppins">Créer un compte</CardTitle>
-              <p className="text-gray-600">Rejoignez la communauté GISABO</p>
+              <p className="text-gray-600">Rejoignez la communauté K-AGESEKE</p>
             </CardHeader>
             
             <CardContent>

@@ -1,4 +1,4 @@
-# 🎯 Configuration Finale GISABO - Prêt pour Digital Ocean
+# 🎯 Configuration Finale K-AGESEKE - Prêt pour Digital Ocean
 
 ## ✅ TOUT EST CONFIGURÉ - Déploiement en 3 Clics
 
@@ -18,7 +18,7 @@
 ### Étape 1: Digital Ocean Setup (2 min)
 1. Allez sur https://cloud.digitalocean.com/apps
 2. Cliquez **"Create App"**
-3. GitHub → `yeoyedjande/gisabo-v2` → `main`
+3. GitHub → `yeoyedjande/k-ageseke-v2` → `main`
 4. Digital Ocean détecte automatiquement `.do/app.yaml` ✅
 
 ### Étape 2: Variables d'Environnement (3 min)
@@ -53,7 +53,7 @@ instance_count: 1                 # Une seule instance
 Avec cette configuration minimale, vous aurez :
 
 1. **🌐 Site Web Complet** - Interface moderne
-2. **🤖 Assistant Gisabo** - Chatbot AI en FR/EN  
+2. **🤖 Assistant K-Ageseke** - Chatbot AI en FR/EN  
 3. **👥 Authentification** - Comptes utilisateurs
 4. **🛒 Marketplace** - Catalogue produits africains
 5. **💸 Transferts** - Interface de transfert d'argent
@@ -63,7 +63,7 @@ Avec cette configuration minimale, vous aurez :
 ## 🎯 URLs Post-Déploiement
 
 Votre app sera disponible sur :
-`https://gisabo-platform-[id-unique].ondigitalocean.app`
+`https://k-ageseke-platform-[id-unique].ondigitalocean.app`
 
 **Testez immédiatement :**
 - `/` → Page d'accueil
@@ -111,7 +111,7 @@ Votre app sera disponible sur :
 
 ### Actions Immédiates
 1. **Testez l'app** sur tous les endpoints
-2. **Vérifiez le chatbot** Assistant Gisabo
+2. **Vérifiez le chatbot** Assistant K-Ageseke
 3. **Créez un compte utilisateur** pour tester
 4. **Documentez l'URL** de production
 
@@ -126,7 +126,7 @@ Votre app sera disponible sur :
 ## 🎯 RÉSULTAT FINAL
 
 **Vous aurez :**
-- ✅ Application GISABO complète en production
+- ✅ Application K-AGESEKE complète en production
 - ✅ Coût maîtrisé à 20$/mois
 - ✅ Toutes les fonctionnalités principales actives
 - ✅ Assistant AI fonctionnel

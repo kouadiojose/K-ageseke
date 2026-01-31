@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight mb-6">
-              <span className="text-secondary"> Gisabo</span>
+              <span className="text-secondary"> K-Ageseke</span>
             </h1>
             <p className="text-xl text-gray-100 mb-8 leading-relaxed">
               {t("hero.subtitle")}

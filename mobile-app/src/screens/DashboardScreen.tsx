@@ -110,7 +110,7 @@ export default function DashboardScreen() {
           Bonjour, {user?.firstName || 'Utilisateur'} !
         </Text>
         <Text style={styles.subtitle}>
-          Bienvenue sur votre tableau de bord GISABO
+          Bienvenue sur votre tableau de bord K-AGESEKE
         </Text>
       </View>
 

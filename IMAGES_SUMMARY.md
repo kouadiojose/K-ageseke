@@ -7,8 +7,8 @@
 **Total : 60+ images prêtes pour la production**
 
 #### Images Système (2 fichiers)
-- `client/public/gisabo-logo.png` - Logo principal
-- `attached_assets/logo_gisabo.png` - Logo alternatif
+- `client/public/k-ageseke-logo.png` - Logo principal
+- `attached_assets/logo_k-ageseke.png` - Logo alternatif
 
 #### Images Produits (5 fichiers)
 - 5 images de produits africains déjà uploadées
@@ -16,7 +16,7 @@
 - Tailles appropriées pour l'affichage
 
 #### Images Services (7 fichiers)  
-- 7 images de services GISABO
+- 7 images de services K-AGESEKE
 - Photos professionnelles des offres
 - Format JPG optimisé
 
@@ -59,8 +59,8 @@ function createDirectories() {
 
 #### Images Statiques
 ```
-https://votre-app.ondigitalocean.app/gisabo-logo.png
-https://votre-app.ondigitalocean.app/assets/logo_gisabo.png
+https://votre-app.ondigitalocean.app/k-ageseke-logo.png
+https://votre-app.ondigitalocean.app/assets/logo_k-ageseke.png
 ```
 
 #### Images Produits/Services

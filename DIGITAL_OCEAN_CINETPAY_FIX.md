@@ -16,7 +16,7 @@ Error: CinetPay configuration missing: API_KEY and SITE_ID are required
 ### Étape 1: Accéder aux Paramètres de l'Application
 
 1. Connectez-vous à [Digital Ocean App Platform](https://cloud.digitalocean.com/apps)
-2. Sélectionnez votre application **GISABO**
+2. Sélectionnez votre application **K-AGESEKE**
 3. Cliquez sur **Settings** dans le menu de gauche
 4. Cliquez sur **Environment Variables**
 
@@ -142,6 +142,6 @@ Une fois les variables ajoutées correctement :
 ✅ **Application déployée avec succès**  
 ✅ **CinetPay fonctionnel** pour les paiements africains  
 ✅ **Square fonctionnel** pour les paiements occidentaux  
-✅ **GISABO accessible** à l'URL Digital Ocean  
+✅ **K-AGESEKE accessible** à l'URL Digital Ocean  
 
 **Temps estimé pour résoudre** : 5-10 minutes après ajout des variables

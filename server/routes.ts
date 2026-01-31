@@ -8,10 +8,10 @@ import multer from "multer";
 import path from "path";
 import fs from "fs";
 import { sendTransferConfirmationEmail, sendOrderConfirmationEmail } from "./emailService";
-import { chatWithGisaboAssistant, generateChatSuggestions } from "./openai";
+import { chatWithKAgesekeAssistant, generateChatSuggestions } from "./openai";
 // Utilisation de l'API REST Square directement
 
-const JWT_SECRET = process.env.JWT_SECRET || "gisabo-admin-secret-key-2024";
+const JWT_SECRET = process.env.JWT_SECRET || "k-ageseke-admin-secret-key-2024";
 const SQUARE_APPLICATION_ID = process.env.SQUARE_APPLICATION_ID || "sandbox-sq0idb-example";
 const SQUARE_ACCESS_TOKEN = process.env.SQUARE_ACCESS_TOKEN || "sandbox-access-token";
 
@@ -1320,10 +1320,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         const hashedPassword = await bcrypt.hash("admin123", 10);
         await storage.createAdmin({
           username: "admin",
-          email: "admin@gisabo.com",
+          email: "admin@k-ageseke.com",
           password: hashedPassword,
           firstName: "Admin",
-          lastName: "Gisabo",
+          lastName: "K-Ageseke",
           role: "admin",
           isActive: true,
         });
@@ -1359,7 +1359,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GISABO Mobile</title>
+    <title>K-Ageseke Mobile</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; min-height: 100vh; }
@@ -1391,7 +1391,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 </head>
 <body>
     <div class="header">
-        <h1>GISABO</h1>
+        <h1>K-Ageseke</h1>
         <p>Votre pont vers l'Afrique</p>
     </div>
     
@@ -1410,7 +1410,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         
         <div id="dashboard-section" class="section-container">
             <div class="section">
-                <div class="section-title">Bienvenue sur GISABO Mobile</div>
+                <div class="section-title">Bienvenue sur K-Ageseke Mobile</div>
                 <p>Application mobile connectée à votre backend en temps réel</p>
                 <div style="margin-top: 20px;">
                     <button class="nav-item" onclick="showSection('transfer')" style="margin: 5px; display: inline-block;">💸 Nouveau transfert</button>
@@ -1459,7 +1459,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         <div id="profile-section" class="section-container hidden">
             <div class="section">
                 <div class="section-title">Mon Profil</div>
-                <p>Version mobile de GISABO</p>
+                <p>Version mobile de K-Ageseke</p>
                 <p style="margin-top: 10px;">✅ Connectée au backend</p>
                 <p>✅ Données authentiques</p>
                 <p>✅ API fonctionnelle</p>
@@ -1572,7 +1572,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 </html>`);
   });
 
-  // Chatbot API Routes - Assistant Gisabo
+  // Chatbot API Routes - Assistant K-Ageseke
   app.post("/api/chat", async (req, res) => {
     try {
       const { message, conversationHistory } = req.body;
@@ -1581,7 +1581,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ message: "Message is required" });
       }
 
-      const response = await chatWithGisaboAssistant(message, conversationHistory || []);
+      const response = await chatWithKAgesekeAssistant(message, conversationHistory || []);
       res.json({ response });
     } catch (error: any) {
       console.error("Chat error:", error);

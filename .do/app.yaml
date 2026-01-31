@@ -1,11 +1,11 @@
-name: gisabo-v2
+name: k-ageseke-v2
 region: fra
 
 services:
 - name: web
   source_dir: /
   build_command: npm ci && npm run build
-  run_command: npm start
+  run_command: node init-db.js && npm start
   environment_slug: node-js
   instance_count: 1
   instance_size_slug: basic-xxs
@@ -45,8 +45,8 @@ services:
     type: SECRET
 
 databases:
-- name: gisabo-db
+- name: kagesekedb
   engine: PG
-  version: "14"
+  version: "17"
   size: basic-xs
   num_nodes: 1

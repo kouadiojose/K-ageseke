@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script de configuration de la base de données pour GISABO
+# Script de configuration de la base de données pour K-AGESEKE
 # Usage: ./setup-database.sh [production|development]
 
 set -e
@@ -25,7 +25,7 @@ log_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
-log_info "Configuration de la base de données GISABO - Environnement: $ENVIRONMENT"
+log_info "Configuration de la base de données K-AGESEKE - Environnement: $ENVIRONMENT"
 
 # Charger les variables d'environnement
 if [ -f .env ]; then
@@ -38,8 +38,8 @@ fi
 # Configuration par défaut pour le développement
 DB_HOST=${PGHOST:-localhost}
 DB_PORT=${PGPORT:-5432}
-DB_NAME=${PGDATABASE:-gisabo}
-DB_USER=${PGUSER:-gisabo_user}
+DB_NAME=${PGDATABASE:-k-ageseke}
+DB_USER=${PGUSER:-k-ageseke_user}
 DB_PASSWORD=${PGPASSWORD:-}
 
 if [ -z "$DB_PASSWORD" ]; then
