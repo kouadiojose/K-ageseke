@@ -411,6 +411,7 @@ export const translations = {
       totalToPay: "Total to pay",
       continue: "Continue",
       recipientInfo: "Recipient information",
+      financialDetails: "Transaction details",
     },
     dashboard: {
       title: "Dashboard",
