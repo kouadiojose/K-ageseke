@@ -688,7 +688,7 @@ export default function AdminSidebar() {
                           Services Actifs
                         </p>
                         <p className="text-2xl font-bold text-gray-900">
-                          {services?.filter((s: any) => s.isActive).length || 0}
+                          {Array.isArray(services) ? services.filter((s: any) => s.isActive).length : 0}
                         </p>
                       </div>
                       <div className="p-2 bg-purple-100 rounded-lg">

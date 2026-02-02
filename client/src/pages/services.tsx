@@ -49,7 +49,7 @@ export default function Services() {
               </Card>
             ))}
           </div>
-        ) : services && services.length > 0 ? (
+        ) : services && Array.isArray(services) && services.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services
               .filter(service => service.isActive)
