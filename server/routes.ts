@@ -1599,6 +1599,37 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Contact form endpoint
+  app.post("/api/contact", async (req: Request, res: Response) => {
+    try {
+      const { firstName, lastName, email, phone, subject, message, urgency } = req.body;
+
+      if (!firstName || !lastName || !email || !subject || !message) {
+        return res.status(400).json({ message: "All required fields must be filled" });
+      }
+
+      // Log the contact request (in production, send email via nodemailer)
+      console.log(`[CONTACT] New message from ${firstName} ${lastName} (${email})`);
+      console.log(`  Subject: ${subject} | Urgency: ${urgency}`);
+      console.log(`  Phone: ${phone || 'N/A'}`);
+      console.log(`  Message: ${message}`);
+
+      try {
+        const { sendContactEmail } = await import("./emailService");
+        if (typeof sendContactEmail === "function") {
+          await sendContactEmail({ firstName, lastName, email, phone, subject, message, urgency });
+        }
+      } catch {
+        // Email service not configured, silently continue
+      }
+
+      res.json({ success: true, message: "Message received successfully" });
+    } catch (error: any) {
+      console.error("Contact form error:", error);
+      res.status(500).json({ message: "Failed to send message" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

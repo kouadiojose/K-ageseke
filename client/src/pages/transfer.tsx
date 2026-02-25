@@ -24,9 +24,27 @@ import { useLanguage } from "@/lib/i18n";
 
 const countries = [
   { code: "BI", name: "Burundi", currency: "BIF", flag: "🇧🇮" },
+  { code: "CD", name: "RD Congo", currency: "CDF", flag: "🇨🇩" },
+  { code: "RW", name: "Rwanda", currency: "RWF", flag: "🇷🇼" },
+  { code: "TZ", name: "Tanzanie", currency: "TZS", flag: "🇹🇿" },
+  { code: "KE", name: "Kenya", currency: "KES", flag: "🇰🇪" },
+  { code: "UG", name: "Ouganda", currency: "UGX", flag: "🇺🇬" },
+  { code: "CM", name: "Cameroun", currency: "XAF", flag: "🇨🇲" },
+  { code: "SN", name: "Sénégal", currency: "XOF", flag: "🇸🇳" },
+  { code: "CI", name: "Côte d'Ivoire", currency: "XOF", flag: "🇨🇮" },
+  { code: "ML", name: "Mali", currency: "XOF", flag: "🇲🇱" },
+  { code: "BF", name: "Burkina Faso", currency: "XOF", flag: "🇧🇫" },
+  { code: "CG", name: "Congo-Brazzaville", currency: "XAF", flag: "🇨🇬" },
+  { code: "GA", name: "Gabon", currency: "XAF", flag: "🇬🇦" },
+  { code: "TD", name: "Tchad", currency: "XAF", flag: "🇹🇩" },
+  { code: "MG", name: "Madagascar", currency: "MGA", flag: "🇲🇬" },
+  { code: "BJ", name: "Bénin", currency: "XOF", flag: "🇧🇯" },
+  { code: "TG", name: "Togo", currency: "XOF", flag: "🇹🇬" },
+  { code: "NE", name: "Niger", currency: "XOF", flag: "🇳🇪" },
+  { code: "GN", name: "Guinée", currency: "GNF", flag: "🇬🇳" },
 ];
 
-const currencies = ["CAD", "CHF", "SEK"];
+const currencies = ["CAD", "USD", "EUR", "GBP", "CHF", "SEK"];
 
 export default function Transfer() {
   const [, navigate] = useLocation();

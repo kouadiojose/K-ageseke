@@ -12,7 +12,7 @@ import { useLanguage } from "@/lib/i18n";
 
 export default function Contact() {
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -28,25 +28,39 @@ export default function Contact() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulation d'envoi du formulaire
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: t('contact.toast.title'),
+          description: t('contact.toast.description'),
+        });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+          urgency: "normal",
+        });
+      } else {
+        throw new Error("Failed to send");
+      }
+    } catch {
       toast({
-        title: t('contact.toast.title'),
-        description: t('contact.toast.description'),
+        title: language === "fr" ? "Erreur" : "Error",
+        description: language === "fr" ? "Impossible d'envoyer le message. Réessayez." : "Could not send message. Please try again.",
+        variant: "destructive",
       });
+    } finally {
       setIsLoading(false);
-      
-      // Reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-        urgency: "normal",
-      });
-    }, 1500);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
